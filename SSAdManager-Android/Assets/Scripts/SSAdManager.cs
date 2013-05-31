@@ -2,15 +2,23 @@ using UnityEngine;
 using System.Collections;
 
 public class SSAdManager : MonoBehaviour {
-
+	
+	//PlayHaven variables
+	public static bool PlayHavenRunFullScreenAd;							//Enables/disables Full screen ad in Update method
+	
 	// Use this for initialization
 	void Start () {
+		PlayHavenRunFullScreenAd = false;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(PlayHavenRunFullScreenAd)
+		{
+			gameObject.SendMessage("RequestPlayHavenContent");
+			PlayHavenRunFullScreenAd = false;
+		}
 	}
 	
 	
@@ -46,7 +54,8 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showPlayHavenFullScreenAd()
 	{
-		//if(SSAdInitializer.PlayHavenActiveStaticFlag)	
+		if(SSAdInitializer.PlayHavenActiveStaticFlag)	
+			PlayHavenRunFullScreenAd = true;
 	}
 	
 	public static void showPlayHavenMoreGamesAd()

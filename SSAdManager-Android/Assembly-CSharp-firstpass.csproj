@@ -55,6 +55,10 @@
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroid.cs" />
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroidManager.cs" />
      <Compile Include="Assets\Plugins\IRevMobListener.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenBinding.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenContentRequester.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenManager.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenVGPHandler.cs" />
      <Compile Include="Assets\Plugins\RevMob.cs" />
      <Compile Include="Assets\Plugins\RevMobBanner.cs" />
      <Compile Include="Assets\Plugins\RevMobFullscreen.cs" />
@@ -64,8 +68,12 @@
      <None Include="Assets\Plugins\AdMobAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
- <Reference Include="Assets\Plugins\P31RestKit">
- <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
+     <None Include="Assets\Plugins\Android\build.xml" />
+ <Reference Include="Assets\Plugins\Prime31\P31RestKit">
+ <HintPath>Assets\Plugins\Prime31\P31RestKit.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\Plugins\PlayHaven\External\LitJSON">
+ <HintPath>Assets\Plugins\PlayHaven\External\LitJSON.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

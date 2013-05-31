@@ -5,6 +5,8 @@ Project("{3C62357B-4C40-2CE6-7154-D8C6E298739D}") = "SSAdManager-Android", "Asse
 EndProject
 Project("{3C62357B-4C40-2CE6-7154-D8C6E298739D}") = "SSAdManager-Android", "Assembly-CSharp-vs.csproj", "{1E00B6F6-C8C9-DBDE-B9A5-79D32BE0C16C}"
 EndProject
+Project("{3C62357B-4C40-2CE6-7154-D8C6E298739D}") = "SSAdManager-Android", "Assembly-CSharp-Editor-vs.csproj", "{071B189B-4203-C729-F636-AB13021FC9CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{1E00B6F6-C8C9-DBDE-B9A5-79D32BE0C16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E00B6F6-C8C9-DBDE-B9A5-79D32BE0C16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E00B6F6-C8C9-DBDE-B9A5-79D32BE0C16C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071B189B-4203-C729-F636-AB13021FC9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071B189B-4203-C729-F636-AB13021FC9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071B189B-4203-C729-F636-AB13021FC9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071B189B-4203-C729-F636-AB13021FC9CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-						GlobalSection(MonoDevelopProperties) = preSolution
+								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

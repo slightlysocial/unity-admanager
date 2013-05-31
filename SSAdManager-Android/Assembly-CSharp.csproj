@@ -50,8 +50,12 @@
      <None Include="Assets\Plugins\AdMobAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
- <Reference Include="Assets\Plugins\P31RestKit">
- <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
+     <None Include="Assets\Plugins\Android\build.xml" />
+ <Reference Include="Assets\Plugins\Prime31\P31RestKit">
+ <HintPath>Assets\Plugins\Prime31\P31RestKit.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\Plugins\PlayHaven\External\LitJSON">
+ <HintPath>Assets\Plugins\PlayHaven\External\LitJSON.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

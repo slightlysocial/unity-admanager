@@ -41,5 +41,10 @@ public class TestScriptGUI : MonoBehaviour {
 			SSAdManager.showAdMobBanner();
 		}
 		
+		if(GUI.Button(new Rect(0, 750, 300, 100), "Show Play Haven Full Screen Ad"))
+		{
+			SSAdManager.showPlayHavenFullScreenAd();
+		}
+		
 	}
 }

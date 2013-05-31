@@ -60,9 +60,9 @@ public class SSAdInitializer : MonoBehaviour {
 			AdMobAndroid.init(AdMobID);	
 		}
 		
-		//Disable PlayHaven
-		if(!PlayHavenActiveFlag){
-			
+		//Initialize Playhaven
+		if(PlayHavenActiveFlag){
+			gameObject.SendMessage("OpenNotification");
 		}
 		
 		
