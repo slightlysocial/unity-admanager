@@ -40,7 +40,8 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showAdMobBanner()
 	{
-		//if(SSAdInitializer.AdMobActiveStaticFlag)
+		if(SSAdInitializer.AdMobActiveStaticFlag)
+			AdMobAndroid.createBanner(AdMobAndroidAd.smartBanner,AdMobAdPlacement.BottomCenter);
 	}
 	
 	public static void showPlayHavenFullScreenAd()

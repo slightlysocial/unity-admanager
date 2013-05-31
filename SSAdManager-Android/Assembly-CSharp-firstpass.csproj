@@ -44,6 +44,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\AdMobAndroid\AdMobAndroid.cs" />
+     <Compile Include="Assets\Plugins\AdMobAndroid\AdMobAndroidManager.cs" />
      <Compile Include="Assets\Plugins\Android\RevMobAndroid.cs" />
      <Compile Include="Assets\Plugins\Android\RevMobAndroidBanner.cs" />
      <Compile Include="Assets\Plugins\Android\RevMobAndroidFullscreen.cs" />
@@ -59,6 +61,7 @@
      <Compile Include="Assets\Plugins\RevMobLink.cs" />
      <Compile Include="Assets\Plugins\RevMobNotification.cs" />
      <Compile Include="Assets\Plugins\RevMobPopup.cs" />
+     <None Include="Assets\Plugins\AdMobAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="Assets\Plugins\P31RestKit">

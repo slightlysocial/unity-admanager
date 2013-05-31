@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\SSAdInitializer.cs" />
      <Compile Include="Assets\Scripts\SSAdManager.cs" />
      <Compile Include="Assets\Scripts\TestScriptGUI.cs" />
+     <None Include="Assets\Plugins\AdMobAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="Assets\Plugins\P31RestKit">

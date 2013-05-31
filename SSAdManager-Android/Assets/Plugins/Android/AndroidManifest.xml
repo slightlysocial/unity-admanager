@@ -56,6 +56,16 @@
             	android:configChanges="keyboardHidden|orientation" >
     		</activity>
 		
+		<!-- ADMOB -->
+		
+			<activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        
+			<receiver android:name="com.google.ads.InstallReceiver" android:exported="true">
+				<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+				</intent-filter>
+			</receiver>
+		
 </application>
 
 			<uses-permission  android:name="android.permission.INTERNET"/>

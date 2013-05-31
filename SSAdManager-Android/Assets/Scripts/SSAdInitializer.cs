@@ -36,6 +36,7 @@ public class SSAdInitializer : MonoBehaviour {
 		ChartBoostActiveStaticFlag = ChartBoostActiveFlag;
 		RevMobActiveStaticFlag = RevMobActiveFlag;
 		AdMobActiveStaticFlag = AdMobActiveFlag;
+		PlayHavenActiveStaticFlag = PlayHavenActiveFlag;
 		
 		//Initialize ChartBoost
 		if(ChartBoostActiveFlag)
@@ -56,7 +57,7 @@ public class SSAdInitializer : MonoBehaviour {
 		//Initialize Admob
 		if(AdMobActiveFlag)
 		{
-				
+			AdMobAndroid.init(AdMobID);	
 		}
 		
 		//Disable PlayHaven

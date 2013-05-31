@@ -36,5 +36,10 @@ public class TestScriptGUI : MonoBehaviour {
 			SSAdManager.showRevMobFullScreenAd();
 		}
 		
+		if(GUI.Button(new Rect(0, 600, 300, 100), "Show AdMob Bottom Banner"))
+		{
+			SSAdManager.showAdMobBanner();
+		}
+		
 	}
 }
