@@ -25,5 +25,16 @@ public class TestScriptGUI : MonoBehaviour {
 		{
 			SSAdManager.showChartBoostMoreGamesAd();
 		}
+		
+		if(GUI.Button(new Rect(0, 300, 300, 100), "Show RevMob PopUp Ad"))
+		{
+			SSAdManager.showRevMobPopUpAd();
+		}
+		
+		if(GUI.Button(new Rect(0, 450, 300, 100), "Show RevMob Full Screen Ad"))
+		{
+			SSAdManager.showRevMobFullScreenAd();
+		}
+		
 	}
 }

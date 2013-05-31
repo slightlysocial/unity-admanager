@@ -25,4 +25,31 @@ public class SSAdManager : MonoBehaviour {
 		if(SSAdInitializer.ChartBoostActiveStaticFlag)
 			ChartBoostAndroid.showMoreApps();
 	}
+	
+	public static void showRevMobPopUpAd()
+	{
+		if(SSAdInitializer.RevMobActiveStaticFlag)
+			SSAdInitializer.revMobSession.ShowPopup();
+	}
+	
+	public static void showRevMobFullScreenAd()
+	{
+		if(SSAdInitializer.RevMobActiveStaticFlag)
+			SSAdInitializer.revMobSession.ShowFullscreen();
+	}
+	
+	public static void showAdMobBanner()
+	{
+		//if(SSAdInitializer.AdMobActiveStaticFlag)
+	}
+	
+	public static void showPlayHavenFullScreenAd()
+	{
+		//if(SSAdInitializer.PlayHavenActiveStaticFlag)	
+	}
+	
+	public static void showPlayHavenMoreGamesAd()
+	{
+		//if(SSAdInitializer.PlayHavenActiveStaticFlag)	
+	}
 }

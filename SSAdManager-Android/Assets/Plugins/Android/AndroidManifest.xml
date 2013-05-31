@@ -38,6 +38,8 @@
             <meta-data android:name="android.app.lib_name" android:value="unity" />
             <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
         </activity>
+		
+		<!-- CHARTBOOST -->
     
 			<activity android:name="com.chartboost.sdk.CBDialogActivity"
 				android:configChanges="orientation|keyboard|keyboardHidden"
@@ -47,6 +49,13 @@
 			</activity>
 			<activity android:name="com.chartboost.sdk.CBImpressionActivity" android:excludeFromRecents="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
+		<!-- REVMOB -->
+		
+			<activity
+            	android:name="com.revmob.ads.fullscreen.FullscreenActivity"
+            	android:configChanges="keyboardHidden|orientation" >
+    		</activity>
+		
 </application>
 
 			<uses-permission  android:name="android.permission.INTERNET"/>

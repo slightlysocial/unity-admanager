@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{EA299B72-23A6-7BFC-66C1-5810D2FF0E13}</ProjectGuid>
+	<ProjectGuid>{0FE94541-1760-8907-1FC9-ABC3AA58B68F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -44,8 +44,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Android\RevMobAndroid.cs" />
+     <Compile Include="Assets\Plugins\Android\RevMobAndroidBanner.cs" />
+     <Compile Include="Assets\Plugins\Android\RevMobAndroidFullscreen.cs" />
+     <Compile Include="Assets\Plugins\Android\RevMobAndroidLink.cs" />
+     <Compile Include="Assets\Plugins\Android\RevMobAndroidNotification.cs" />
+     <Compile Include="Assets\Plugins\Android\RevMobAndroidPopup.cs" />
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroid.cs" />
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroidManager.cs" />
+     <Compile Include="Assets\Plugins\IRevMobListener.cs" />
+     <Compile Include="Assets\Plugins\RevMob.cs" />
+     <Compile Include="Assets\Plugins\RevMobBanner.cs" />
+     <Compile Include="Assets\Plugins\RevMobFullscreen.cs" />
+     <Compile Include="Assets\Plugins\RevMobLink.cs" />
+     <Compile Include="Assets\Plugins\RevMobNotification.cs" />
+     <Compile Include="Assets\Plugins\RevMobPopup.cs" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="Assets\Plugins\P31RestKit">
