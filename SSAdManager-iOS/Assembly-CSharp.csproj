@@ -50,6 +50,9 @@
  <Reference Include="Assets\Plugins\P31RestKit">
  <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
  </Reference>
+ <Reference Include="Assets\Plugins\PlayHaven\External\LitJSON">
+ <HintPath>Assets\Plugins\PlayHaven\External\LitJSON.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

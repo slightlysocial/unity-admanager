@@ -49,6 +49,10 @@
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostBinding.cs" />
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostManager.cs" />
      <Compile Include="Assets\Plugins\IRevMobListener.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenBinding.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenContentRequester.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenManager.cs" />
+     <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenVGPHandler.cs" />
      <Compile Include="Assets\Plugins\RevMob.cs" />
      <Compile Include="Assets\Plugins\RevMobBanner.cs" />
      <Compile Include="Assets\Plugins\RevMobFullscreen.cs" />
@@ -62,6 +66,9 @@
      <Compile Include="Assets\Plugins\iOS\RevMobIosNotification.cs" />
  <Reference Include="Assets\Plugins\P31RestKit">
  <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\Plugins\PlayHaven\External\LitJSON">
+ <HintPath>Assets\Plugins\PlayHaven\External\LitJSON.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

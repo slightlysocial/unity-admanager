@@ -14,6 +14,7 @@ extern "C"
 	extern gboolean		mono_aot_only;
 	extern gpointer*	mono_aot_module_Assembly_CSharp_firstpass_info; // Assembly-CSharp-firstpass.dll
 	extern gpointer*	mono_aot_module_Assembly_CSharp_info; // Assembly-CSharp.dll
+	extern gpointer*	mono_aot_module_LitJSON_info; // LitJSON.dll
 	extern gpointer*	mono_aot_module_Mono_Security_info; // Mono.Security.dll
 	extern gpointer*	mono_aot_module_P31RestKit_info; // P31RestKit.dll
 	extern gpointer*	mono_aot_module_System_Core_info; // System.Core.dll
@@ -39,6 +40,15 @@ extern "C"
 	void	_chartBoostTrackEventWithMetadata();
 	void	_chartBoostTrackEventWithValue();
 	void	_chartBoostTrackEventWithValueAndMetadata();
+	void	_PlayHavenCancelRequest();
+	void	_PlayHavenProductPurchaseResolution();
+	void	_PlayHavenIAPTrackingRequest();
+	void	_PlayHavenOptOutStatus();
+	void	_PlayHavenSetOptOutStatus();
+	void	_PlayHavenOpenRequest();
+	void	_PlayHavenMetadataRequest();
+	void	_PlayHavenContentRequest();
+	void	_PlayHavenPreloadRequest();
 	void	RevMobUnityiOSBinding_startSession();
 	void	RevMobUnityiOSBinding_setTestingMode();
 	void	RevMobUnityiOSBinding_showFullscreen();
@@ -66,6 +76,7 @@ void RegisterMonoModules()
 	mono_ficall_flag = false;
 	mono_aot_register_module(mono_aot_module_Assembly_CSharp_firstpass_info);
 	mono_aot_register_module(mono_aot_module_Assembly_CSharp_info);
+	mono_aot_register_module(mono_aot_module_LitJSON_info);
 	mono_aot_register_module(mono_aot_module_Mono_Security_info);
 	mono_aot_register_module(mono_aot_module_P31RestKit_info);
 	mono_aot_register_module(mono_aot_module_System_Core_info);
@@ -91,6 +102,15 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("_chartBoostTrackEventWithMetadata", (void*)&_chartBoostTrackEventWithMetadata);
 	mono_dl_register_symbol("_chartBoostTrackEventWithValue", (void*)&_chartBoostTrackEventWithValue);
 	mono_dl_register_symbol("_chartBoostTrackEventWithValueAndMetadata", (void*)&_chartBoostTrackEventWithValueAndMetadata);
+	mono_dl_register_symbol("_PlayHavenCancelRequest", (void*)&_PlayHavenCancelRequest);
+	mono_dl_register_symbol("_PlayHavenProductPurchaseResolution", (void*)&_PlayHavenProductPurchaseResolution);
+	mono_dl_register_symbol("_PlayHavenIAPTrackingRequest", (void*)&_PlayHavenIAPTrackingRequest);
+	mono_dl_register_symbol("_PlayHavenOptOutStatus", (void*)&_PlayHavenOptOutStatus);
+	mono_dl_register_symbol("_PlayHavenSetOptOutStatus", (void*)&_PlayHavenSetOptOutStatus);
+	mono_dl_register_symbol("_PlayHavenOpenRequest", (void*)&_PlayHavenOpenRequest);
+	mono_dl_register_symbol("_PlayHavenMetadataRequest", (void*)&_PlayHavenMetadataRequest);
+	mono_dl_register_symbol("_PlayHavenContentRequest", (void*)&_PlayHavenContentRequest);
+	mono_dl_register_symbol("_PlayHavenPreloadRequest", (void*)&_PlayHavenPreloadRequest);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_startSession", (void*)&RevMobUnityiOSBinding_startSession);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_setTestingMode", (void*)&RevMobUnityiOSBinding_setTestingMode);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_showFullscreen", (void*)&RevMobUnityiOSBinding_showFullscreen);

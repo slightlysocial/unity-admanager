@@ -67,7 +67,7 @@ public class SSAdInitializer : MonoBehaviour {
 		
 		//Initialize Playhaven
 		if(PlayHavenActiveFlag){
-			
+			gameObject.SendMessage("OpenNotification");
 		}
 		
 		//Initialize iAds

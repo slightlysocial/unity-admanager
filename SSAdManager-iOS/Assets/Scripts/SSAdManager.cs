@@ -54,8 +54,8 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showPlayHavenFullScreenAd()
 	{
-		//if(SSAdInitializer.PlayHavenActiveStaticFlag)	
-			//PlayHavenRunFullScreenAd = true;
+		if(SSAdInitializer.PlayHavenActiveStaticFlag)	
+			PlayHavenRunFullScreenAd = true;
 	}
 	
 	public static void showPlayHavenMoreGamesAd()
