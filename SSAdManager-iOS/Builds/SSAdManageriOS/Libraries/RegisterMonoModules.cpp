@@ -21,6 +21,13 @@ extern "C"
 	extern gpointer*	mono_aot_module_UnityEngine_info; // UnityEngine.dll
 	extern gpointer*	mono_aot_module_mscorlib_info; // mscorlib.dll
 #endif // !(TARGET_IPHONE_SIMULATOR)
+	void	_adMobInit();
+	void	_adMobSetTestDevice();
+	void	_adMobCreateBanner();
+	void	_adMobDestroyBanner();
+	void	_adMobRequestInterstitalAd();
+	void	_adMobIsInterstitialAdReady();
+	void	_adMobShowInterstitialAd();
 	void	_chartBoostInit();
 	void	_chartBoostCacheInterstitial();
 	void	_chartBoostHasCachedInterstitial();
@@ -66,6 +73,13 @@ void RegisterMonoModules()
 	mono_aot_register_module(mono_aot_module_UnityEngine_info);
 	mono_aot_register_module(mono_aot_module_mscorlib_info);
 
+	mono_dl_register_symbol("_adMobInit", (void*)&_adMobInit);
+	mono_dl_register_symbol("_adMobSetTestDevice", (void*)&_adMobSetTestDevice);
+	mono_dl_register_symbol("_adMobCreateBanner", (void*)&_adMobCreateBanner);
+	mono_dl_register_symbol("_adMobDestroyBanner", (void*)&_adMobDestroyBanner);
+	mono_dl_register_symbol("_adMobRequestInterstitalAd", (void*)&_adMobRequestInterstitalAd);
+	mono_dl_register_symbol("_adMobIsInterstitialAdReady", (void*)&_adMobIsInterstitialAdReady);
+	mono_dl_register_symbol("_adMobShowInterstitialAd", (void*)&_adMobShowInterstitialAd);
 	mono_dl_register_symbol("_chartBoostInit", (void*)&_chartBoostInit);
 	mono_dl_register_symbol("_chartBoostCacheInterstitial", (void*)&_chartBoostCacheInterstitial);
 	mono_dl_register_symbol("_chartBoostHasCachedInterstitial", (void*)&_chartBoostHasCachedInterstitial);

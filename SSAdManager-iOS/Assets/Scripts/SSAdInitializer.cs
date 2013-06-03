@@ -62,7 +62,7 @@ public class SSAdInitializer : MonoBehaviour {
 		//Initialize Admob
 		if(AdMobActiveFlag)
 		{
-				
+			AdMobBinding.init(AdMobID);
 		}
 		
 		//Initialize Playhaven

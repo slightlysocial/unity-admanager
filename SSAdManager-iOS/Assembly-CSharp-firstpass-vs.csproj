@@ -44,6 +44,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\AdMob\AdMobBinding.cs" />
+     <Compile Include="Assets\Plugins\AdMob\AdMobManager.cs" />
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostBinding.cs" />
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostManager.cs" />
      <Compile Include="Assets\Plugins\IRevMobListener.cs" />
