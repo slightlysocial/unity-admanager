@@ -32,6 +32,24 @@ extern "C"
 	void	_chartBoostTrackEventWithMetadata();
 	void	_chartBoostTrackEventWithValue();
 	void	_chartBoostTrackEventWithValueAndMetadata();
+	void	RevMobUnityiOSBinding_startSession();
+	void	RevMobUnityiOSBinding_setTestingMode();
+	void	RevMobUnityiOSBinding_showFullscreen();
+	void	RevMobUnityiOSBinding_showFullscreenWithSpecificOrientations();
+	void	RevMobUnityiOSBinding_openAdLink();
+	void	RevMobUnityiOSBinding_showPopup();
+	void	RevMobUnityiOSBinding_printEnvironmentInformation();
+	void	RevMobUnityiOSBinding_setGameObjectDelegateCallback();
+	void	RevMobUnityiOSBinding_setTimeoutInSeconds();
+	void	RevMobUnityiOSBinding_showBanner();
+	void	RevMobUnityiOSBinding_hideBanner();
+	void	RevMobUnityiOSBinding_deactivateBannerAd();
+	void	RevMobUnityiOSBinding_loadFullscreen();
+	void	RevMobUnityiOSBinding_loadFullscreenWithSpecificOrientations();
+	void	RevMobUnityiOSBinding_showLoadedFullscreen();
+	void	RevMobUnityiOSBinding_releaseLoadedFullscreen();
+	void	RevMobUnityiOSBinding_loadAdLink();
+	void	RevMobUnityiOSBinding_openLoadedAdLink();
 }
 void RegisterMonoModules()
 {
@@ -59,6 +77,24 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("_chartBoostTrackEventWithMetadata", (void*)&_chartBoostTrackEventWithMetadata);
 	mono_dl_register_symbol("_chartBoostTrackEventWithValue", (void*)&_chartBoostTrackEventWithValue);
 	mono_dl_register_symbol("_chartBoostTrackEventWithValueAndMetadata", (void*)&_chartBoostTrackEventWithValueAndMetadata);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_startSession", (void*)&RevMobUnityiOSBinding_startSession);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_setTestingMode", (void*)&RevMobUnityiOSBinding_setTestingMode);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_showFullscreen", (void*)&RevMobUnityiOSBinding_showFullscreen);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_showFullscreenWithSpecificOrientations", (void*)&RevMobUnityiOSBinding_showFullscreenWithSpecificOrientations);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_openAdLink", (void*)&RevMobUnityiOSBinding_openAdLink);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_showPopup", (void*)&RevMobUnityiOSBinding_showPopup);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_printEnvironmentInformation", (void*)&RevMobUnityiOSBinding_printEnvironmentInformation);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_setGameObjectDelegateCallback", (void*)&RevMobUnityiOSBinding_setGameObjectDelegateCallback);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_setTimeoutInSeconds", (void*)&RevMobUnityiOSBinding_setTimeoutInSeconds);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_showBanner", (void*)&RevMobUnityiOSBinding_showBanner);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_hideBanner", (void*)&RevMobUnityiOSBinding_hideBanner);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_deactivateBannerAd", (void*)&RevMobUnityiOSBinding_deactivateBannerAd);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_loadFullscreen", (void*)&RevMobUnityiOSBinding_loadFullscreen);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_loadFullscreenWithSpecificOrientations", (void*)&RevMobUnityiOSBinding_loadFullscreenWithSpecificOrientations);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_showLoadedFullscreen", (void*)&RevMobUnityiOSBinding_showLoadedFullscreen);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_releaseLoadedFullscreen", (void*)&RevMobUnityiOSBinding_releaseLoadedFullscreen);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_loadAdLink", (void*)&RevMobUnityiOSBinding_loadAdLink);
+	mono_dl_register_symbol("RevMobUnityiOSBinding_openLoadedAdLink", (void*)&RevMobUnityiOSBinding_openLoadedAdLink);
 #endif // !(TARGET_IPHONE_SIMULATOR)
 }
 

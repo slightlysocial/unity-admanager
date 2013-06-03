@@ -46,6 +46,18 @@
   <ItemGroup>
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostBinding.cs" />
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostManager.cs" />
+     <Compile Include="Assets\Plugins\IRevMobListener.cs" />
+     <Compile Include="Assets\Plugins\RevMob.cs" />
+     <Compile Include="Assets\Plugins\RevMobBanner.cs" />
+     <Compile Include="Assets\Plugins\RevMobFullscreen.cs" />
+     <Compile Include="Assets\Plugins\RevMobLink.cs" />
+     <Compile Include="Assets\Plugins\RevMobNotification.cs" />
+     <Compile Include="Assets\Plugins\RevMobPopup.cs" />
+     <Compile Include="Assets\Plugins\iOS\RevMobIos.cs" />
+     <Compile Include="Assets\Plugins\iOS\RevMobIosBanner.cs" />
+     <Compile Include="Assets\Plugins\iOS\RevMobIosFullscreen.cs" />
+     <Compile Include="Assets\Plugins\iOS\RevMobIosLink.cs" />
+     <Compile Include="Assets\Plugins\iOS\RevMobIosNotification.cs" />
  <Reference Include="Assets\Plugins\P31RestKit">
  <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
  </Reference>

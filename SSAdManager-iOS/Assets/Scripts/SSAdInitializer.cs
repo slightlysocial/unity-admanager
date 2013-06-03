@@ -18,6 +18,7 @@ public class SSAdInitializer : MonoBehaviour {
 	private static readonly Dictionary<String, String> REVMOB_APP_IDS = new Dictionary<String, String>();	
 																//Must use this to store RevMob ID
 	//public static RevMob revMobSession;								//Used to create a session
+	public static RevMob revMobSession;							//RevMob session variable
 	
 	//Admob variables
 	public bool AdMobActiveFlag;								//Do you want AdMob activated in this project?
@@ -54,7 +55,8 @@ public class SSAdInitializer : MonoBehaviour {
 		//Initialize RevMob
 		if(RevMobActiveFlag)
 		{
-		
+			REVMOB_APP_IDS.Add("IOS", RevMobID);
+			revMobSession = RevMob.Start(REVMOB_APP_IDS);
 		}
 		
 		//Initialize Admob

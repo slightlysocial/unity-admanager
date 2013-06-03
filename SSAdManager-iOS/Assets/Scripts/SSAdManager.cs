@@ -36,14 +36,14 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showRevMobPopUpAd()
 	{
-		//if(SSAdInitializer.RevMobActiveStaticFlag)
-			//SSAdInitializer.revMobSession.ShowPopup();
+		if(SSAdInitializer.RevMobActiveStaticFlag)
+			SSAdInitializer.revMobSession.ShowPopup();
 	}
 	
 	public static void showRevMobFullScreenAd()
 	{
-		//if(SSAdInitializer.RevMobActiveStaticFlag)
-			//SSAdInitializer.revMobSession.ShowFullscreen();
+		if(SSAdInitializer.RevMobActiveStaticFlag)
+			SSAdInitializer.revMobSession.ShowFullscreen();
 	}
 	
 	public static void showAdMobBanner()
