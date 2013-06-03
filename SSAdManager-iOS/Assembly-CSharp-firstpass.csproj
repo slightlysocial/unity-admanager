@@ -59,6 +59,9 @@
      <Compile Include="Assets\Plugins\RevMobLink.cs" />
      <Compile Include="Assets\Plugins\RevMobNotification.cs" />
      <Compile Include="Assets\Plugins\RevMobPopup.cs" />
+     <Compile Include="Assets\Plugins\iAd\AdAdapter.cs" />
+     <Compile Include="Assets\Plugins\iAd\AdBinding.cs" />
+     <Compile Include="Assets\Plugins\iAd\AdManager.cs" />
      <Compile Include="Assets\Plugins\iOS\RevMobIos.cs" />
      <Compile Include="Assets\Plugins\iOS\RevMobIosBanner.cs" />
      <Compile Include="Assets\Plugins\iOS\RevMobIosFullscreen.cs" />

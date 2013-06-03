@@ -49,6 +49,12 @@ extern "C"
 	void	_PlayHavenMetadataRequest();
 	void	_PlayHavenContentRequest();
 	void	_PlayHavenPreloadRequest();
+	void	_iAdCreateAdBanner();
+	void	_iAdDestroyAdBanner();
+	void	_iAdFireHideShowEvents();
+	void	_iAdInitializeInterstitial();
+	void	_iAdInterstitialIsLoaded();
+	void	_iAdShowInterstitial();
 	void	RevMobUnityiOSBinding_startSession();
 	void	RevMobUnityiOSBinding_setTestingMode();
 	void	RevMobUnityiOSBinding_showFullscreen();
@@ -111,6 +117,12 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("_PlayHavenMetadataRequest", (void*)&_PlayHavenMetadataRequest);
 	mono_dl_register_symbol("_PlayHavenContentRequest", (void*)&_PlayHavenContentRequest);
 	mono_dl_register_symbol("_PlayHavenPreloadRequest", (void*)&_PlayHavenPreloadRequest);
+	mono_dl_register_symbol("_iAdCreateAdBanner", (void*)&_iAdCreateAdBanner);
+	mono_dl_register_symbol("_iAdDestroyAdBanner", (void*)&_iAdDestroyAdBanner);
+	mono_dl_register_symbol("_iAdFireHideShowEvents", (void*)&_iAdFireHideShowEvents);
+	mono_dl_register_symbol("_iAdInitializeInterstitial", (void*)&_iAdInitializeInterstitial);
+	mono_dl_register_symbol("_iAdInterstitialIsLoaded", (void*)&_iAdInterstitialIsLoaded);
+	mono_dl_register_symbol("_iAdShowInterstitial", (void*)&_iAdShowInterstitial);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_startSession", (void*)&RevMobUnityiOSBinding_startSession);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_setTestingMode", (void*)&RevMobUnityiOSBinding_setTestingMode);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_showFullscreen", (void*)&RevMobUnityiOSBinding_showFullscreen);

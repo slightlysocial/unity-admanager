@@ -65,7 +65,8 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showIAdsBanner()
 	{
-		//if(SSAdInitializer.IAdsActiveStaticFlag)
+		if(SSAdInitializer.IAdsActiveStaticFlag)
+			AdBinding.createAdBanner(true);
 			
 	}
 }
