@@ -24,14 +24,14 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showChartBoostFullScreenAd()
 	{
-		//if(SSAdInitializer.ChartBoostActiveStaticFlag)
-			//ChartBoostAndroid.showInterstitial(null);	
+		if(SSAdInitializer.ChartBoostActiveStaticFlag)
+			ChartBoostBinding.showInterstitial(null);	
 	}
 	
 	public static void showChartBoostMoreGamesAd()
 	{
-		//if(SSAdInitializer.ChartBoostActiveStaticFlag)
-			//ChartBoostAndroid.showMoreApps();
+		if(SSAdInitializer.ChartBoostActiveStaticFlag)
+			ChartBoostBinding.showMoreApps();
 	}
 	
 	public static void showRevMobPopUpAd()
@@ -61,5 +61,11 @@ public class SSAdManager : MonoBehaviour {
 	public static void showPlayHavenMoreGamesAd()
 	{
 		//if(SSAdInitializer.PlayHavenActiveStaticFlag)	
+	}
+	
+	public static void showIAdsBanner()
+	{
+		//if(SSAdInitializer.IAdsActiveStaticFlag)
+			
 	}
 }

@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{5129A639-9884-390D-DD5F-A396B95F7D89}") = "SSAdManager-iOS", "Assembly-CSharp-firstpass.csproj", "{7EEEFD59-32D1-3154-7D47-3D1A5FD52F7B}"
+EndProject
 Project("{5129A639-9884-390D-DD5F-A396B95F7D89}") = "SSAdManager-iOS", "Assembly-CSharp.csproj", "{23C83879-BBAD-1A67-DD5B-589F41A67364}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EEEFD59-32D1-3154-7D47-3D1A5FD52F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EEEFD59-32D1-3154-7D47-3D1A5FD52F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EEEFD59-32D1-3154-7D47-3D1A5FD52F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EEEFD59-32D1-3154-7D47-3D1A5FD52F7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23C83879-BBAD-1A67-DD5B-589F41A67364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23C83879-BBAD-1A67-DD5B-589F41A67364}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23C83879-BBAD-1A67-DD5B-589F41A67364}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -17,7 +23,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
+											GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -35,4 +41,5 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
+
 EndGlobal

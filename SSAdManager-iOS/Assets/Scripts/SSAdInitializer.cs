@@ -26,7 +26,11 @@ public class SSAdInitializer : MonoBehaviour {
 	
 	//PlayHaven variables
 	public bool PlayHavenActiveFlag;							//Do you want playHaven activated in this project?
-	public static bool PlayHavenActiveStaticFlag;				//Add condition of Admob Active Flag to this
+	public static bool PlayHavenActiveStaticFlag;				//Add condition of PlayHaven Active Flag to this
+	
+	//iAds variables
+	public bool IAdsActiveFlag;							//Do you want iAds activated in this project?
+	public static bool IAdsActiveStaticFlag;			//Add condition of iAds Active flag to this
 	
 	
 	// Use this for initialization
@@ -37,11 +41,14 @@ public class SSAdInitializer : MonoBehaviour {
 		RevMobActiveStaticFlag = RevMobActiveFlag;
 		AdMobActiveStaticFlag = AdMobActiveFlag;
 		PlayHavenActiveStaticFlag = PlayHavenActiveFlag;
+		IAdsActiveStaticFlag = IAdsActiveFlag;
 		
 		//Initialize ChartBoost
 		if(ChartBoostActiveFlag)
 		{
-			
+			ChartBoostBinding.init(ChartBoostID,ChartBoostSIG, false);
+			ChartBoostBinding.cacheInterstitial(null);
+			ChartBoostBinding.cacheMoreApps();
 		}
 		
 		//Initialize RevMob
@@ -58,6 +65,12 @@ public class SSAdInitializer : MonoBehaviour {
 		
 		//Initialize Playhaven
 		if(PlayHavenActiveFlag){
+			
+		}
+		
+		//Initialize iAds
+		if(IAdsActiveFlag)
+		{
 			
 		}
 		
