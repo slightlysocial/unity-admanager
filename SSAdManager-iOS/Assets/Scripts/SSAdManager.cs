@@ -5,6 +5,7 @@ public class SSAdManager : MonoBehaviour {
 	
 	//PlayHaven variables
 	public static bool PlayHavenRunFullScreenAd;							//Enables/disables Full screen ad in Update method
+	public static bool PlayHavenRunMoreGamesAd;
 	
 	//PList website
 	public string PListURL = "";
@@ -23,12 +24,13 @@ public class SSAdManager : MonoBehaviour {
 						adOnReturn2,
 						adOnGameOver,
 						adBanner,
+						adMoreGames,
 						adInReview;
 					
 	//Ad values
 	public enum AdValue
 	{
-		ON,
+		ADSON,
 		CHARTBOOST_FS,
 		CHARTBOOST_MOREGAMES,
 		REVMOB_FS,
@@ -46,6 +48,7 @@ public class SSAdManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		PlayHavenRunFullScreenAd = false;
+		PlayHavenRunMoreGamesAd = false;
 		PListStaticURL = PListURL;
 		CurrentStaticVersionNumber = CurrentVersionNumber;
 		//Debug.Log(PListStaticURL);
@@ -58,6 +61,11 @@ public class SSAdManager : MonoBehaviour {
 		{
 			gameObject.SendMessage("RequestPlayHavenContent");
 			PlayHavenRunFullScreenAd = false;
+		}
+		else if(PlayHavenRunMoreGamesAd)
+		{
+			GameObject.Find ("PlayHavenMoreGames").SendMessage("RequestPlayHavenContent");
+			PlayHavenRunMoreGamesAd = false;
 		}
 	}
 	
@@ -98,6 +106,7 @@ public class SSAdManager : MonoBehaviour {
 				adOnReturn2 = (AdValue)(adTable["AD_ON_RETURN2"]);
 				adOnGameOver = (AdValue)(adTable["AD_ON_GAMEOVER"]);
 				adBanner = (AdValue)(adTable["AD_BANNER"]);
+				adMoreGames = (AdValue)(adTable["AD_MORE_GAMES"]);
 				adInReview  = (AdValue)(adTable["AD_IN_REVIEW"]);
 				
 				Debug.Log("loaded PLIST complete");
@@ -114,13 +123,11 @@ public class SSAdManager : MonoBehaviour {
 	public static void ShowAd(AdValue adValue)
 	{
 		//don't show ads if in review
-		if(adInReview != AdValue.ON || PlayerPrefs.HasKey("PurchasedSlightlySocialItem"))
+		if(adInReview != AdValue.ADSON || PlayerPrefs.HasKey("TurnOffAds"))
 		{
 			return;	
 		}
-		
-		//don't show ads if player has purchased something
-		//TODO
+
 		
 		if(adValue == AdValue.CHARTBOOST_FS)
 		{
@@ -188,7 +195,7 @@ public class SSAdManager : MonoBehaviour {
 	public static void ShowOnLoad()
 	{
 		ShowAd(adOnLoad1);
-		//ShowAd(adOnLoad2);
+		ShowAd(adOnLoad2);
 	}
 	
 	public static void ShowOnPause()
@@ -213,6 +220,11 @@ public class SSAdManager : MonoBehaviour {
 		ShowAd (adBanner);
 	}
 	
+	public static void ShowMoreGames()
+	{
+		ShowAd (adMoreGames);	
+	}
+	
 	public static void showChartBoostFullScreenAd()
 	{
 		if(SSAdInitializer.ChartBoostActiveStaticFlag)
@@ -234,7 +246,7 @@ public class SSAdManager : MonoBehaviour {
 	public static void showRevMobBannerAd()
 	{
 		if(SSAdInitializer.RevMobActiveStaticFlag){
-		//TODO
+			SSAdInitializer.revMobSession.CreateBanner(0f, Screen.height - 100f, Screen.width, 100f, null, null);
 		}
 	}
 	
@@ -258,7 +270,8 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showPlayHavenMoreGamesAd()
 	{
-		//if(SSAdInitializer.PlayHavenActiveStaticFlag)	
+		if(SSAdInitializer.PlayHavenActiveStaticFlag)
+			PlayHavenRunMoreGamesAd = true;
 	}
 	
 	public static void showIAdsBanner()

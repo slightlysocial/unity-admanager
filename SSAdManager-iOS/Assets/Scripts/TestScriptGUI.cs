@@ -41,6 +41,11 @@ public class TestScriptGUI : MonoBehaviour {
 			SSAdManager.ShowBanner();
 		}
 		
+		if(GUI.Button(new Rect(0, 1000, 300, 100), "Show More Games"))
+		{
+			SSAdManager.ShowMoreGames();
+		}
+		
 		
 		
 		
