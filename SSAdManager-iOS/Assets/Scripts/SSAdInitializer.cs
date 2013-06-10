@@ -33,6 +33,12 @@ public class SSAdInitializer : MonoBehaviour {
 	public bool IAdsActiveFlag;							//Do you want iAds activated in this project?
 	public static bool IAdsActiveStaticFlag;			//Add condition of iAds Active flag to this
 	
+	//Tapyjoy variables
+	public bool TapJoyActiveFlag;						//Do you want TapJoy activated in this project
+	public static bool TapJoyActiveStaticFlag;			// Add conidition of TapJoy Active flag to this
+	public string TapJoyID = "";
+	public string TapJoySecretKey = "";
+	
 	
 	// Use this for initialization
 	void Awake () {
@@ -43,6 +49,7 @@ public class SSAdInitializer : MonoBehaviour {
 		AdMobActiveStaticFlag = AdMobActiveFlag;
 		PlayHavenActiveStaticFlag = PlayHavenActiveFlag;
 		IAdsActiveStaticFlag = IAdsActiveFlag;
+		TapJoyActiveStaticFlag = TapJoyActiveFlag;
 		
 		//Initialize ChartBoost
 		if(ChartBoostActiveFlag)
@@ -76,7 +83,12 @@ public class SSAdInitializer : MonoBehaviour {
 			
 		}
 		
-		
+		//Initialize TapJoy
+		if(TapJoyActiveFlag)
+		{
+			TapjoyPluginIOS.RequestTapjoyConnect(TapJoyID, TapJoySecretKey);
+			Debug.Log("Tapjoy integrated");
+		}
 	}
 	
 	// Update is called once per frame

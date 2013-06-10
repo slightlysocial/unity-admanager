@@ -44,9 +44,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\PListManager.cs" />
      <Compile Include="Assets\Scripts\SSAdInitializer.cs" />
      <Compile Include="Assets\Scripts\SSAdManager.cs" />
      <Compile Include="Assets\Scripts\TestScriptGUI.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPlugin.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPluginAndroid.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPluginDefault.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPluginIOS.cs" />
  <Reference Include="Assets\Plugins\P31RestKit">
  <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
  </Reference>
