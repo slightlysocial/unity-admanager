@@ -6,7 +6,7 @@ public class TestScriptGUI : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-	
+		StartCoroutine(SSAdManager.LoadPList());
 	}
 	
 	// Update is called once per frame
@@ -16,40 +16,34 @@ public class TestScriptGUI : MonoBehaviour {
 	
 	void OnGUI()
 	{
-		if(GUI.Button(new Rect(0, 0, 300, 100), "Show Chartboost Full screen Ad"))
+		if(GUI.Button(new Rect(0, 0, 300, 100), "Show On Load"))
 		{
-			SSAdManager.showChartBoostFullScreenAd();
+			SSAdManager.ShowOnLoad();
 		}
 		
-		if(GUI.Button(new Rect(0, 150, 300, 100), "Show Chartboost More Games Ad"))
+		if(GUI.Button(new Rect(0, 200, 300, 100), "Show On Pause"))
 		{
-			SSAdManager.showChartBoostMoreGamesAd();
+			SSAdManager.ShowOnPause();
 		}
 		
-		if(GUI.Button(new Rect(0, 300, 300, 100), "Show RevMob PopUp Ad"))
+		if(GUI.Button(new Rect(0, 400, 300, 100), "Show On Return"))
 		{
-			SSAdManager.showRevMobPopUpAd();
+			SSAdManager.ShowOnReturn();
 		}
 		
-		if(GUI.Button(new Rect(0, 450, 300, 100), "Show RevMob Full Screen Ad"))
+		if(GUI.Button(new Rect(0, 600, 300, 100), "Show On Gameover"))
 		{
-			SSAdManager.showRevMobFullScreenAd();
+			SSAdManager.ShowOnGameOver();
 		}
 		
-		if(GUI.Button(new Rect(0, 600, 300, 100), "Show AdMob Bottom Banner"))
+		if(GUI.Button(new Rect(0, 800, 300, 100), "Show Banner"))
 		{
-			SSAdManager.showAdMobBanner();
+			SSAdManager.ShowBanner();
 		}
 		
-		if(GUI.Button(new Rect(0, 750, 300, 100), "Show Play Haven Full Screen Ad"))
-		{
-			SSAdManager.showPlayHavenFullScreenAd();
-		}
 		
-		if(GUI.Button(new Rect(0, 900, 300, 100), "Show iAds Banner"))
-		{
-			SSAdManager.showIAdsBanner();
-		}
+		
+		
 		
 	}
 }

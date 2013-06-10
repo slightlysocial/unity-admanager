@@ -8,13 +8,13 @@ public class SSAdManager : MonoBehaviour {
 	
 	//PList website
 	public string PListURL = "";
-	public static string PListStaticURL = "";
+	public static string PListStaticURL;
 	public string CurrentVersionNumber = "";
 	public static string CurrentStaticVersionNumber = "";
+
 	
 	
 	//Placeholders for ads
-	public static bool adInReview = true;
 	public static AdValue adOnLoad1,
 						adOnLoad2,
 						adOnPause1,
@@ -22,12 +22,13 @@ public class SSAdManager : MonoBehaviour {
 						adOnReturn1,
 						adOnReturn2,
 						adOnGameOver,
-						adBanner;
+						adBanner,
+						adInReview;
 					
 	//Ad values
 	public enum AdValue
 	{
-		OFF,
+		ON,
 		CHARTBOOST_FS,
 		CHARTBOOST_MOREGAMES,
 		REVMOB_FS,
@@ -43,9 +44,11 @@ public class SSAdManager : MonoBehaviour {
 	};
 	
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		PlayHavenRunFullScreenAd = false;
 		PListStaticURL = PListURL;
+		CurrentStaticVersionNumber = CurrentVersionNumber;
+		//Debug.Log(PListStaticURL);
 		
 	}
 	
@@ -60,13 +63,24 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static IEnumerator LoadPList()
 	{
+		
+		
 		//Load plist
 		WWW www = new WWW(PListStaticURL);
         yield return www;
 		
+		if (www.error!= null)
+		{
+			Debug.Log(www.error);
+			return false;
+		}
+		
+		
 		//Parse plist
 		Hashtable hashTable = new Hashtable();
 		PListManager.ParsePListText(www.text, ref hashTable);
+		
+		Debug.Log("start parse");
 		
 		foreach(object key in hashTable.Keys)
 		{
@@ -84,19 +98,23 @@ public class SSAdManager : MonoBehaviour {
 				adOnReturn2 = (AdValue)(adTable["AD_ON_RETURN2"]);
 				adOnGameOver = (AdValue)(adTable["AD_ON_GAMEOVER"]);
 				adBanner = (AdValue)(adTable["AD_BANNER"]);
-				adInReview  = (((int)adTable["AD_IN_REVIEW"]) != 1);
+				adInReview  = (AdValue)(adTable["AD_IN_REVIEW"]);
 				
 				Debug.Log("loaded PLIST complete");
 				
 				break;//found version...exit loop
 			}
 		}
+		
+		
+		Debug.Log(adInReview);
+		Debug.Log("End of plist loading...");
 	}
 	
 	public static void ShowAd(AdValue adValue)
 	{
 		//don't show ads if in review
-		if(adInReview || PlayerPrefs.HasKey("PurchasedSlightlySocialItem"))
+		if(adInReview != AdValue.ON || PlayerPrefs.HasKey("PurchasedSlightlySocialItem"))
 		{
 			return;	
 		}
@@ -107,50 +125,62 @@ public class SSAdManager : MonoBehaviour {
 		if(adValue == AdValue.CHARTBOOST_FS)
 		{
 			showChartBoostFullScreenAd();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.CHARTBOOST_MOREGAMES)
 		{
 			showChartBoostMoreGamesAd();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.REVMOB_FS)
 		{
 			showRevMobFullScreenAd();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.REVMOB_POPUP)
 		{
 			showRevMobPopUpAd();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.REVMOB_BANNER)
 		{
 			showRevMobBannerAd();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.PLAYHAVEN_FS)
 		{
 			showPlayHavenFullScreenAd();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.PLAYHAVEN_MOREGAMES)
 		{
 			showPlayHavenMoreGamesAd();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.APPLIFT)
 		{
 			//TODO
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.ADMOB_BANNER)
 		{
 			showAdMobBanner();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.IADS_BANNER)
 		{
 			showIAdsBanner();
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.MOBCLIX_BANNER)
 		{
 			//TODO
+			Debug.Log("AD SHOWING");
 		}
 		else if(adValue == AdValue.VUNGLE)
 		{
 			//TODO
+			Debug.Log("AD SHOWING");
 		}
 		
 	}
@@ -158,22 +188,30 @@ public class SSAdManager : MonoBehaviour {
 	public static void ShowOnLoad()
 	{
 		ShowAd(adOnLoad1);
-		ShowAd(adOnLoad2);
+		//ShowAd(adOnLoad2);
 	}
 	
 	public static void ShowOnPause()
 	{
 		ShowAd(adOnPause1);
-		ShowAd (adOnPause2);
+		//ShowAd (adOnPause2);
 	}
 	
 	public static void ShowOnReturn()
 	{
-		
+		ShowAd (adOnReturn1);
+		//ShowAd (adOnReturn2);
 	}
 	
+	public static void ShowOnGameOver()
+	{
+		ShowAd (adOnGameOver);	
+	}
 	
-	
+	public static void ShowBanner()
+	{
+		ShowAd (adBanner);
+	}
 	
 	public static void showChartBoostFullScreenAd()
 	{

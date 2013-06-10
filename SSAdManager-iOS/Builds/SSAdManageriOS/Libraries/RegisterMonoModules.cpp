@@ -18,6 +18,7 @@ extern "C"
 	extern gpointer*	mono_aot_module_Mono_Security_info; // Mono.Security.dll
 	extern gpointer*	mono_aot_module_P31RestKit_info; // P31RestKit.dll
 	extern gpointer*	mono_aot_module_System_Core_info; // System.Core.dll
+	extern gpointer*	mono_aot_module_System_Xml_info; // System.Xml.dll
 	extern gpointer*	mono_aot_module_System_info; // System.dll
 	extern gpointer*	mono_aot_module_UnityEngine_info; // UnityEngine.dll
 	extern gpointer*	mono_aot_module_mscorlib_info; // mscorlib.dll
@@ -73,6 +74,35 @@ extern "C"
 	void	RevMobUnityiOSBinding_releaseLoadedFullscreen();
 	void	RevMobUnityiOSBinding_loadAdLink();
 	void	RevMobUnityiOSBinding_openLoadedAdLink();
+	void	_SetCallbackHandler();
+	void	_RequestTapjoyConnect();
+	void	_SetFlagKeyValue();
+	void	_EnableLogging();
+	void	_ActionComplete();
+	void	_SetUserID();
+	void	_ShowOffers();
+	void	_ShowOffersWithCurrencyID();
+	void	_GetFullScreenAd();
+	void	_GetFullScreenAdWithCurrencyID();
+	void	_SetCurrencyMultiplier();
+	void	_ShowFullScreenAd();
+	void	_GetDailyRewardAd();
+	void	_GetDailyRewardAdWithCurrencyID();
+	void	_ShowDailyRewardAd();
+	void	_ShowDefaultEarnedCurrencyAlert();
+	void	_GetTapPoints();
+	void	_SpendTapPoints();
+	void	_AwardTapPoints();
+	void	_QueryTapPoints();
+	void	_GetDisplayAd();
+	void	_ShowDisplayAd();
+	void	_HideDisplayAd();
+	void	_GetDisplayAdWithCurrencyID();
+	void	_SetDisplayAdSize();
+	void	_EnableDisplayAdAutoRefresh();
+	void	_MoveDisplayAd();
+	void	_SetTransitionEffect();
+	void	_SendIAPEvent();
 }
 void RegisterMonoModules()
 {
@@ -86,6 +116,7 @@ void RegisterMonoModules()
 	mono_aot_register_module(mono_aot_module_Mono_Security_info);
 	mono_aot_register_module(mono_aot_module_P31RestKit_info);
 	mono_aot_register_module(mono_aot_module_System_Core_info);
+	mono_aot_register_module(mono_aot_module_System_Xml_info);
 	mono_aot_register_module(mono_aot_module_System_info);
 	mono_aot_register_module(mono_aot_module_UnityEngine_info);
 	mono_aot_register_module(mono_aot_module_mscorlib_info);
@@ -141,6 +172,35 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("RevMobUnityiOSBinding_releaseLoadedFullscreen", (void*)&RevMobUnityiOSBinding_releaseLoadedFullscreen);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_loadAdLink", (void*)&RevMobUnityiOSBinding_loadAdLink);
 	mono_dl_register_symbol("RevMobUnityiOSBinding_openLoadedAdLink", (void*)&RevMobUnityiOSBinding_openLoadedAdLink);
+	mono_dl_register_symbol("_SetCallbackHandler", (void*)&_SetCallbackHandler);
+	mono_dl_register_symbol("_RequestTapjoyConnect", (void*)&_RequestTapjoyConnect);
+	mono_dl_register_symbol("_SetFlagKeyValue", (void*)&_SetFlagKeyValue);
+	mono_dl_register_symbol("_EnableLogging", (void*)&_EnableLogging);
+	mono_dl_register_symbol("_ActionComplete", (void*)&_ActionComplete);
+	mono_dl_register_symbol("_SetUserID", (void*)&_SetUserID);
+	mono_dl_register_symbol("_ShowOffers", (void*)&_ShowOffers);
+	mono_dl_register_symbol("_ShowOffersWithCurrencyID", (void*)&_ShowOffersWithCurrencyID);
+	mono_dl_register_symbol("_GetFullScreenAd", (void*)&_GetFullScreenAd);
+	mono_dl_register_symbol("_GetFullScreenAdWithCurrencyID", (void*)&_GetFullScreenAdWithCurrencyID);
+	mono_dl_register_symbol("_SetCurrencyMultiplier", (void*)&_SetCurrencyMultiplier);
+	mono_dl_register_symbol("_ShowFullScreenAd", (void*)&_ShowFullScreenAd);
+	mono_dl_register_symbol("_GetDailyRewardAd", (void*)&_GetDailyRewardAd);
+	mono_dl_register_symbol("_GetDailyRewardAdWithCurrencyID", (void*)&_GetDailyRewardAdWithCurrencyID);
+	mono_dl_register_symbol("_ShowDailyRewardAd", (void*)&_ShowDailyRewardAd);
+	mono_dl_register_symbol("_ShowDefaultEarnedCurrencyAlert", (void*)&_ShowDefaultEarnedCurrencyAlert);
+	mono_dl_register_symbol("_GetTapPoints", (void*)&_GetTapPoints);
+	mono_dl_register_symbol("_SpendTapPoints", (void*)&_SpendTapPoints);
+	mono_dl_register_symbol("_AwardTapPoints", (void*)&_AwardTapPoints);
+	mono_dl_register_symbol("_QueryTapPoints", (void*)&_QueryTapPoints);
+	mono_dl_register_symbol("_GetDisplayAd", (void*)&_GetDisplayAd);
+	mono_dl_register_symbol("_ShowDisplayAd", (void*)&_ShowDisplayAd);
+	mono_dl_register_symbol("_HideDisplayAd", (void*)&_HideDisplayAd);
+	mono_dl_register_symbol("_GetDisplayAdWithCurrencyID", (void*)&_GetDisplayAdWithCurrencyID);
+	mono_dl_register_symbol("_SetDisplayAdSize", (void*)&_SetDisplayAdSize);
+	mono_dl_register_symbol("_EnableDisplayAdAutoRefresh", (void*)&_EnableDisplayAdAutoRefresh);
+	mono_dl_register_symbol("_MoveDisplayAd", (void*)&_MoveDisplayAd);
+	mono_dl_register_symbol("_SetTransitionEffect", (void*)&_SetTransitionEffect);
+	mono_dl_register_symbol("_SendIAPEvent", (void*)&_SendIAPEvent);
 #endif // !(TARGET_IPHONE_SIMULATOR)
 }
 
