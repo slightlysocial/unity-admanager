@@ -68,7 +68,7 @@ public class SSAdManager : MonoBehaviour {
 	void Update () {
 		if(PlayHavenRunFullScreenAd)
 		{
-			gameObject.SendMessage("RequestPlayHavenContent");
+			GameObject.Find("PlayHavenFullScreen").SendMessage("RequestPlayHavenContent");
 			PlayHavenRunFullScreenAd = false;
 		}
 		else if(PlayHavenRunMoreGamesAd)
