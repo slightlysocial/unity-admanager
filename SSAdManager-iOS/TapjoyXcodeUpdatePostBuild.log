@@ -1,0 +1,52 @@
+--- Updating Unity-iPhone.xcodeproj/project.pbxproj for Tapjoy integration ---
+Initializing XcodeProject...
+Found UUID for the PBXNativeTarget: 1D6058960D05DD3E006BFB54
+Build phases:
+	{'Frameworks': '1D60588F0D05DD3D006BFB54', 'Sources': '1D60588E0D05DD3D006BFB54', 'Resources': '1D60588D0D05DD3D006BFB54', 'CopyFiles': '83D0C1FD0E6C8D7700EBCE5D'}
+Adding group "Tapjoy"
+group [Tapjoy] doesnt exist.	creating it now.
+Enabling Obj-C exceptions
+Attempting to add Linker flag -ObjC
+Adding Linker Flag 
+					"-weak_framework",
+					CoreMotion,
+					"-weak-lSystem",
+				"-ObjC"
+Adding Linker Flag 
+					"-weak_framework",
+					CoreMotion,
+					"-weak-lSystem",
+					"-Wl,-S,-x",
+				"-ObjC"
+Adding Linker Flag -ObjC
+Adding Linker Flag -Wl,-S,-x,-ObjC
+Attempting to add Linker flag -all_load
+Adding Linker Flag  
+					"-weak_framework",
+					CoreMotion,
+					"-weak-lSystem",
+				"-ObjC","-all_load"
+Adding Linker Flag  
+					"-weak_framework",
+					CoreMotion,
+					"-weak-lSystem",
+					"-Wl,-S,-x",
+				"-ObjC","-all_load"
+Adding Linker Flag -ObjC,-all_load
+Adding Linker Flag -Wl,-S,-x,-ObjC,-all_load
+Adding file reference CoreTelephony.framework
+Adding file CoreTelephony.framework to group Frameworks
+Weak linking framework: CoreTelephony.framework
+Adding build file CoreTelephony.framework
+Adding CoreTelephony.framework to build phase Frameworks
+Adding file reference AdSupport.framework
+Adding file AdSupport.framework to group Frameworks
+Weak linking framework: AdSupport.framework
+Adding build file AdSupport.framework
+Adding AdSupport.framework to build phase Frameworks
+File reference already exists: Foundation.framework
+File reference already exists: UIKit.framework
+File reference already exists: CoreGraphics.framework
+File reference already exists: SystemConfiguration.framework
+File reference already exists: MediaPlayer.framework
+Failed with error: [Errno 2] No such file or directory: '/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Tapjoy/iOS/'

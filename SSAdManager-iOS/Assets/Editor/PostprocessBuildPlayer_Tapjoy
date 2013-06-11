@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+
+# open (LOGFILE, '>>TapjoyXcodeUpdatePostBuild.log');
+
+# foreach $var (@ARGV)
+# {
+# 	print LOGFILE "ARG: $var\n";
+# }
+
+# Don't run if we don't have enough parameters
+if ($#ARGV < 2)
+{
+	# print LOGFILE "Exiting: too few parameters\nTry running from Unity: File -> Build Settings\nUnder Platform, highlight iOS and press 'Switch Platform' then 'Build' buttons.";
+	exit;
+}
+
+# Get our current dir
+$currDir = `pwd`;
+# Remove possible endline
+chomp $currDir;
+
+# Dont run TapjoyXcodeUpdatePostBuild on any builds that are not iPhone builds
+if( $ARGV[1] ne "iPhone" )
+{
+	# Copy over the Sample Manifest if one does not exist
+	if ($ARGV[1] eq "Android" && ! -e "$currDir/Assets/Plugins/Android/AndroidManifest.xml")
+	{
+		$exitval = system("cp", "$currDir/Assets/Editor/Tapjoy/Android/AndroidManifest.xml", "$currDir/Assets/Plugins/Android/")
+	}
+	# print LOGFILE "Exiting: will not run TapjoyXcodeUpdatePostBuild on non-iPhone builds.";
+    exit;
+}
+
+$exitval = system("python", "$currDir/Assets/Editor/TapjoyXcodeUpdatePostBuild.pyc", $ARGV[0], $ARGV[1]);
+
+#print LOGFILE "TapjoyXcodeUpdatePostBuild exited with value: $exitval";

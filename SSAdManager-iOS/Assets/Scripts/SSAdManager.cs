@@ -18,13 +18,22 @@ public class SSAdManager : MonoBehaviour {
 	//Placeholders for ads
 	public static AdValue adOnLoad1,
 						adOnLoad2,
+						adOnLoadFail,
 						adOnPause1,
 						adOnPause2,
+						adOnPauseFail,
 						adOnReturn1,
 						adOnReturn2,
-						adOnGameOver,
-						adBanner,
-						adMoreGames,
+						adOnReturnFail,
+						adOnGameOver1,
+						adOnGameOver2,
+						adOnGameOverFail,
+						adBanner1,
+						adBanner2,
+						adBannerFail,
+						adMoreGames1,
+						adMoreGames2,
+						adMoreGamesFail,
 						adInReview;
 					
 	//Ad values
@@ -100,13 +109,22 @@ public class SSAdManager : MonoBehaviour {
 				
 				adOnLoad1 = (AdValue)(adTable["AD_ON_LOAD1"]);
 				adOnLoad2= (AdValue)(adTable["AD_ON_LOAD2"]);
+				adOnLoadFail= (AdValue)(adTable["AD_ON_LOAD_FAIL"]);
 				adOnPause1 = (AdValue)(adTable["AD_ON_PAUSE1"]);
 				adOnPause2 = (AdValue)(adTable["AD_ON_PAUSE2"]);
+				adOnPauseFail = (AdValue)(adTable["AD_ON_PAUSE_FAIL"]);
 				adOnReturn1 = (AdValue)(adTable["AD_ON_RETURN1"]);
 				adOnReturn2 = (AdValue)(adTable["AD_ON_RETURN2"]);
-				adOnGameOver = (AdValue)(adTable["AD_ON_GAMEOVER"]);
-				adBanner = (AdValue)(adTable["AD_BANNER"]);
-				adMoreGames = (AdValue)(adTable["AD_MORE_GAMES"]);
+				adOnReturnFail = (AdValue)(adTable["AD_ON_RETURN_FAIL"]);
+				adOnGameOver1 = (AdValue)(adTable["AD_ON_GAMEOVER1"]);
+				adOnGameOver2 = (AdValue)(adTable["AD_ON_GAMEOVER2"]);
+				adOnGameOverFail = (AdValue)(adTable["AD_ON_GAMEOVER_FAIL"]);
+				adBanner1 = (AdValue)(adTable["AD_BANNER1"]);
+				adBanner2 = (AdValue)(adTable["AD_BANNER2"]);
+				adBannerFail = (AdValue)(adTable["AD_BANNER_FAIL"]);
+				adMoreGames1 = (AdValue)(adTable["AD_MORE_GAMES1"]);
+				adMoreGames2 = (AdValue)(adTable["AD_MORE_GAMES2"]);
+				adMoreGamesFail = (AdValue)(adTable["AD_MORE_GAMES_FAIL"]);
 				adInReview  = (AdValue)(adTable["AD_IN_REVIEW"]);
 				
 				Debug.Log("loaded PLIST complete");
@@ -212,23 +230,25 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void ShowOnGameOver()
 	{
-		ShowAd (adOnGameOver);	
+		ShowAd (adOnGameOver1);	
 	}
 	
 	public static void ShowBanner()
 	{
-		ShowAd (adBanner);
+		ShowAd (adBanner1);
 	}
 	
 	public static void ShowMoreGames()
 	{
-		ShowAd (adMoreGames);	
+		ShowAd (adMoreGames1);	
 	}
 	
 	public static void showChartBoostFullScreenAd()
 	{
 		if(SSAdInitializer.ChartBoostActiveStaticFlag)
+		{
 			ChartBoostBinding.showInterstitial(null);	
+		}
 	}
 	
 	public static void showChartBoostMoreGamesAd()
