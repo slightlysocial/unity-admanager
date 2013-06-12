@@ -204,7 +204,7 @@ public class SSAdManager : MonoBehaviour {
 		}
 		else if(adValue == AdValue.VUNGLE)
 		{
-			VungleBinding.playModalAd(true);
+			showVungleAd();
 			Debug.Log("AD SHOWING");
 		}
 		
@@ -299,5 +299,11 @@ public class SSAdManager : MonoBehaviour {
 		if(SSAdInitializer.IAdsActiveStaticFlag)
 			AdBinding.createAdBanner(true);
 			
+	}
+
+	public static void showVungleAd()
+	{
+		if(SSAdInitializer.VungleActiveStaticFlag)
+			VungleBinding.playModalAd(true);
 	}
 }

@@ -1,6 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Android/AndroidManifest.xml">
+    <Files>
+      <File FileName="Assets/Scripts/SSAdManager/SSAdManager.cs" Line="297" Column="37" />
+      <File FileName="Assets/Scripts/SSAdManager/SSAdInitializer.cs" Line="113" Column="23" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="72" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

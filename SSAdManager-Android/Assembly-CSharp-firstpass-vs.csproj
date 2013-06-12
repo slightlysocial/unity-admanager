@@ -69,6 +69,7 @@
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\build.xml" />
+     <None Include="Assets\Plugins\Android\TapjoySampleAndroidManifest.xml" />
  <Reference Include="Assets\Plugins\Prime31\P31RestKit">
  <HintPath>Assets\Plugins\Prime31\P31RestKit.dll</HintPath>
  </Reference>

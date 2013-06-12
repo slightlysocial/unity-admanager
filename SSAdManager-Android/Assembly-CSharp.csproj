@@ -44,13 +44,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\SSAdInitializer.cs" />
-     <Compile Include="Assets\Scripts\SSAdManager.cs" />
-     <Compile Include="Assets\Scripts\TestScriptGUI.cs" />
+     <Compile Include="Assets\Scripts\SSAdManager\DontDestroy.cs" />
+     <Compile Include="Assets\Scripts\SSAdManager\PListManager.cs" />
+     <Compile Include="Assets\Scripts\SSAdManager\SSAdInitializer.cs" />
+     <Compile Include="Assets\Scripts\SSAdManager\SSAdManager.cs" />
+     <Compile Include="Assets\Scripts\SSAdManager\TestScriptGUI.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPlugin.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPluginAndroid.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPluginDefault.cs" />
+     <Compile Include="Assets\TapjoyPlugin\TapjoyPluginIOS.cs" />
      <None Include="Assets\Plugins\AdMobAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\build.xml" />
+     <None Include="Assets\Plugins\Android\TapjoySampleAndroidManifest.xml" />
  <Reference Include="Assets\Plugins\Prime31\P31RestKit">
  <HintPath>Assets\Plugins\Prime31\P31RestKit.dll</HintPath>
  </Reference>
