@@ -39,6 +39,11 @@ public class SSAdInitializer : MonoBehaviour {
 	public string TapJoyID = "";
 	public string TapJoySecretKey = "";
 	
+	//Vungle variables
+	public bool VungleActiveFlag;						//Do you want Vungle activated in this project?
+	public static bool VungleActiveStaticFlag;			//Add condition of Vungle Active Flag to this
+	public string VungleID = "";						//Vungle ID
+	
 	
 	// Use this for initialization
 	void Awake () {
@@ -50,6 +55,7 @@ public class SSAdInitializer : MonoBehaviour {
 		PlayHavenActiveStaticFlag = PlayHavenActiveFlag;
 		IAdsActiveStaticFlag = IAdsActiveFlag;
 		TapJoyActiveStaticFlag = TapJoyActiveFlag;
+		VungleActiveStaticFlag = VungleActiveFlag;
 		
 		//Initialize ChartBoost
 		if(ChartBoostActiveFlag)
@@ -88,6 +94,12 @@ public class SSAdInitializer : MonoBehaviour {
 		{
 			TapjoyPluginIOS.RequestTapjoyConnect(TapJoyID, TapJoySecretKey);
 			Debug.Log("Tapjoy integrated");
+		}
+		
+		//Initialize Vungle
+		if(VungleActiveFlag)
+		{
+			VungleBinding.startWithAppId(VungleID);	
 		}
 	}
 	

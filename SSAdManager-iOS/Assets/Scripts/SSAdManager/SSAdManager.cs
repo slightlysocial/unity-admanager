@@ -204,7 +204,7 @@ public class SSAdManager : MonoBehaviour {
 		}
 		else if(adValue == AdValue.VUNGLE)
 		{
-			//TODO
+			VungleBinding.playModalAd(true);
 			Debug.Log("AD SHOWING");
 		}
 		

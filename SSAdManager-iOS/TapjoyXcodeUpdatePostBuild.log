@@ -49,4 +49,30 @@ File reference already exists: UIKit.framework
 File reference already exists: CoreGraphics.framework
 File reference already exists: SystemConfiguration.framework
 File reference already exists: MediaPlayer.framework
-Failed with error: [Errno 2] No such file or directory: '/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Tapjoy/iOS/'
+Adding file reference TapjoyConnect.h
+Adding file TapjoyConnect.h to group Tapjoy
+adding file ref: TapjoyConnect.h
+Adding file reference TapjoyConnectConstants.h
+Adding file TapjoyConnectConstants.h to group Tapjoy
+adding file ref: TapjoyConnectConstants.h
+Adding file reference TapjoyConnectPlugin.h
+Adding file TapjoyConnectPlugin.h to group Tapjoy
+adding file ref: TapjoyConnectPlugin.h
+Adding file reference TapjoyConnectPlugin.mm
+Adding file TapjoyConnectPlugin.mm to group Tapjoy
+adding build file: TapjoyConnectPlugin.mm
+Adding build file TapjoyConnectPlugin.mm
+Adding TapjoyConnectPlugin.mm to build phase Sources
+Adding file reference TapjoyPublisherLibrary.a
+Adding file TapjoyPublisherLibrary.a to group Frameworks
+adding static library: TapjoyPublisherLibrary.a
+Adding build file TapjoyPublisherLibrary.a
+Adding TapjoyPublisherLibrary.a to build phase Frameworks
+adding library search path for folder: Tapjoy
+library search path: /Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Tapjoy/iOS/
+Adding file reference TapjoyResources.bundle
+Adding file TapjoyResources.bundle to group Tapjoy
+adding default resource file: TapjoyResources.bundle
+Adding build file TapjoyResources.bundle
+Adding TapjoyResources.bundle to build phase Resources
+--- Finished Tapjoy integration ---

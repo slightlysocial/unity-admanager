@@ -63,6 +63,8 @@
      <Compile Include="Assets\Plugins\TapjoyPlugin\TapjoyPluginAndroid.cs" />
      <Compile Include="Assets\Plugins\TapjoyPlugin\TapjoyPluginDefault.cs" />
      <Compile Include="Assets\Plugins\TapjoyPlugin\TapjoyPluginIOS.cs" />
+     <Compile Include="Assets\Plugins\Vungle\VungleBinding.cs" />
+     <Compile Include="Assets\Plugins\Vungle\VungleManager.cs" />
      <Compile Include="Assets\Plugins\iAd\AdAdapter.cs" />
      <Compile Include="Assets\Plugins\iAd\AdBinding.cs" />
      <Compile Include="Assets\Plugins\iAd\AdManager.cs" />
