@@ -44,6 +44,11 @@ public class SSAdInitializer : MonoBehaviour {
 	public static bool VungleActiveStaticFlag;			//Add condition of Vungle Active Flag to this
 	public string VungleID = "";						//Vungle ID
 	
+	//Flurry variables
+	public bool FlurryActiveFlag;						//Do you want Flurry activated in this project?
+	public static bool FlurryActiveStaticFlag;			//Add condition of Flurry Active Flag to this
+	public string FlurryID = "";						//Flurry ID
+	
 	
 	// Use this for initialization
 	void Awake () {
@@ -56,6 +61,7 @@ public class SSAdInitializer : MonoBehaviour {
 		IAdsActiveStaticFlag = IAdsActiveFlag;
 		TapJoyActiveStaticFlag = TapJoyActiveFlag;
 		VungleActiveStaticFlag = VungleActiveFlag;
+		FlurryActiveStaticFlag = FlurryActiveFlag;
 		
 		//Initialize ChartBoost
 		if(ChartBoostActiveFlag)
@@ -100,6 +106,12 @@ public class SSAdInitializer : MonoBehaviour {
 		if(VungleActiveFlag)
 		{
 			VungleBinding.startWithAppId(VungleID);	
+		}
+		
+		//Initialize Flurry
+		if(FlurryActiveFlag)
+		{
+			FlurryBinding.startSession(FlurryID);
 		}
 	}
 	

@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0479F975F1274E1A9AA7A56A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F07DAF28364D03B9365C1E /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		087595F5F96B4542999858F9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7653CE615A704A1CB6B9C855 /* StoreKit.framework */; };
+		03B622352BD648E29A68D06A /* vg_button_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 08446B302988423E95774127 /* vg_button_close.png */; };
 		08B24F76137BFDFA00FBA309 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B24F75137BFDFA00FBA309 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		0D3F08EBC3D141A2A49FBAAF /* AdMobBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 212D3DC2F37247A988A5064D /* AdMobBinding.m */; };
-		121443679E6E4928A4B18E84 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7061153AFD4784BF1EC992 /* libGoogleAdMobAds.a */; };
-		1BB01759A1A74B108C35CB23 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B516672094DD6A8F8A7F5 /* MessageUI.framework */; };
+		0C80D26D72E34EBB9858B573 /* TapjoyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED067390A314AC39FF63CE4 /* TapjoyResources.bundle */; };
+		113DC62CB58845B8848235C0 /* VungleBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4029F8ACDB654DE4AA41259E /* VungleBinding.m */; };
+		14DAB95CF61A4E3C96E6D965 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0ED268768484177A7E0091E /* MessageUI.framework */; };
+		1554ACE923604DCD914D9357 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07AEF01E04431AA9C26DB4 /* libGoogleAdMobAds.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		20B8D7EF4A844655B0DF147D /* vg_button_mute_plain.png in Resources */ = {isa = PBXBuildFile; fileRef = C14C2F6FA4A54F19A6EA7442 /* vg_button_mute_plain.png */; };
-		31573AD3817A4BB4842CE416 /* AdMobManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = BED665CDBC7448C8B47AB0BB /* AdMobManager.mm */; };
-		39E427B271EE496795C47E57 /* AdBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2750AE03404BFEB93E9222 /* AdBinding.m */; };
-		3EC6A1CF9CEB40E3852C355F /* TapjoyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9E468DB0BA574EB0996BE0EB /* TapjoyResources.bundle */; };
-		46D515FE5653435CA52C3842 /* vg_button_mute_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = FD37267436A042C58A9EA98B /* vg_button_mute_selected.png */; };
-		55B89852AE824496B0349B68 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0002A49BC64EF7844EA3B1 /* libz.1.1.3.dylib */; };
+		2891174783B74764991CF75A /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B97504D8714BF7B11ABE74 /* libz.1.1.3.dylib */; };
+		401A0233ABB4487582F80FC7 /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84622C6E60C49AF9A2F5AA4 /* libAdapterIAd.a */; };
+		536FF2D58A56418EAC027091 /* vg_button_mute_plain.png in Resources */ = {isa = PBXBuildFile; fileRef = C24B003AE53A4084939C5F60 /* vg_button_mute_plain.png */; };
+		53AAAF6B8A8B4CDF87A0874F /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDEF94EB5EC4B1490F4EF7C /* libChartboost.a */; };
 		5682F4B20F3B34FF007A219C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5682F4B10F3B34FF007A219C /* MediaPlayer.framework */; };
 		5692F3DD0FA9D8E500EBA2F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5692F3DC0FA9D8E500EBA2F1 /* CoreLocation.framework */; };
 		56B7959B1442E0F20026B3DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7959A1442E0F20026B3DD /* CoreGraphics.framework */; };
@@ -28,12 +26,16 @@
 		56BCBA390FCF049A0030C3B2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BCBA380FCF049A0030C3B2 /* SystemConfiguration.framework */; };
 		56DBF99D15E3CDC9007A4A8D /* iPhone_Sensors.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56DBF99C15E3CDC9007A4A8D /* iPhone_Sensors.mm */; };
 		56FD43960ED4745200FE3770 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FD43950ED4745200FE3770 /* CFNetwork.framework */; };
-		58F0E8FBDE0B412D86AFA9C7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51ED0C8D2BED463282B5F8FB /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		602493C5B2BE47158759D570 /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A7B1729DF34A7DA8938C3D /* libAdapterIAd.a */; };
+		5BE764B209E143A298AC4671 /* AdMobManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7D4B1C4C1CFB4B6D8A2A7455 /* AdMobManager.mm */; };
+		5D73D8A7F1B9411B9DF02A16 /* ChartBoostBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9F4585D6FB49649D2CC2EE /* ChartBoostBinding.m */; };
+		651B93FEB28B4F1BBF09A1BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E53A259B5FA4FEE8CCB3567 /* CoreData.framework */; };
+		66B6920918A042FD9BFA8F01 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82789726A0BB4124B9D4CE0A /* StoreKit.framework */; };
+		717D97638AE54C3DBEC71098 /* ChartBoostManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 82EC7C01D9E84285A9B1A4E6 /* ChartBoostManager.mm */; };
+		73C0709A7A5F4333BFC06338 /* libFlurryAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F983FCC514884B7191356376 /* libFlurryAds.a */; };
+		746BF59FC43740F59F9519F8 /* libvunglepub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9EAF4E8D541918D20586B /* libvunglepub.a */; };
 		7F36C11113C5C673007FBDD9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F36C10E13C5C673007FBDD9 /* CoreMedia.framework */; };
 		7F36C11213C5C673007FBDD9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F36C10F13C5C673007FBDD9 /* CoreVideo.framework */; };
 		7F36C11313C5C673007FBDD9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F36C11013C5C673007FBDD9 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		829FA2071B504EA8AE83218A /* libvunglepub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2220C6B6331949318BB54D2F /* libvunglepub.a */; };
 		830B5C110E5ED4C100C7819F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B5C100E5ED4C100C7819F /* UIKit.framework */; };
 		8358D1B80ED1CC3700E3A684 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358D1B70ED1CC3700E3A684 /* AudioToolbox.framework */; };
 		83B256E20E62FEA000468741 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B256E10E62FEA000468741 /* OpenGLES.framework */; };
@@ -50,16 +52,16 @@
 		8A3EDDC81615B7C1001839E9 /* SplashScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EDDC71615B7C1001839E9 /* SplashScreen.mm */; };
 		8A592F4B16176267006B38FC /* VideoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A592F4A16176267006B38FC /* VideoViewController.mm */; };
 		8A5E0B9116849D1800CBB6FE /* DisplayManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A5E0B9016849D1800CBB6FE /* DisplayManager.mm */; };
+		8A73DFE58B27496AAF48DC57 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A519E343B361426A8021329B /* libFlurry.a */; };
 		8A9EB22E156E5A25000DC2B4 /* iPhone_View.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A9EB22D156E5A25000DC2B4 /* iPhone_View.mm */; };
 		8A9FCB131617295F00C05364 /* ActivityIndicator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A9FCB121617295F00C05364 /* ActivityIndicator.mm */; };
 		8AFA69D9161605E7009663A5 /* iPhone_OrientationSupport.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA69D8161605E7009663A5 /* iPhone_OrientationSupport.mm */; };
-		8F0F6F01D6504E5A8F5925FC /* TapjoyPublisherLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B32858129641DEAB2E8F01 /* TapjoyPublisherLibrary.a */; };
-		938D77711D1F43618E30FEBD /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 546FE3E1452A4D7DBB989A2B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		9530DB70F0C444CF98279725 /* VungleBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1208BD17A469281F4BDCD /* VungleBinding.m */; };
-		AEF7259BF9894F4181EBE1FC /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF654F293BD742EAAC18DE29 /* libChartboost.a */; };
-		B10CE91B8E7343B5A0F79740 /* AdManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96C28B3E607B40EBB85C0285 /* AdManager.mm */; };
-		BB0CB743A23F4D81B93CAA55 /* TapjoyConnectPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = F78CCAC9647645978A33F063 /* TapjoyConnectPlugin.mm */; };
-		CAAB8A930BE94F27AAD42F75 /* ChartBoostBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BEF0CD97964920A3C880FF /* ChartBoostBinding.m */; };
+		9F8FAA7A53324FF8B5F25CC1 /* AdManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED3BD681F0DF4DA483D99F4F /* AdManager.mm */; };
+		BE6675BFD92C46AB9CDFB30A /* VungleManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D128CED22314EAE8A8F3CEA /* VungleManager.mm */; };
+		BF6C0CCD112743DC86A2069F /* vg_button_mute_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 088E0EDEFD4D4595824A4314 /* vg_button_mute_selected.png */; };
+		C0F78C3942E945649A157A9A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5328BF1DFDFC4A9A971B7AFE /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C5CB300777B8418799E69309 /* TapjoyConnectPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A099BEBAF6E4E3283D61E0A /* TapjoyConnectPlugin.mm */; };
+		CC70CF7577694C968B17BA88 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF33DAAF7DB74AA3A761C910 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D82DCFC10E8000A5005D6AD8 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D82DCFB70E8000A5005D6AD8 /* AppController.mm */; };
 		D82DCFC30E8000A5005D6AD8 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D82DCFBB0E8000A5005D6AD8 /* main.mm */; };
 		D82DCFC50E8000A5005D6AD8 /* RegisterClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D82DCFBD0E8000A5005D6AD8 /* RegisterClasses.cpp */; };
@@ -88,10 +90,12 @@
 		D8A1C7016E80637F000160D4 /* Icon-144.png in Sources */ = {isa = PBXBuildFile; fileRef = D8A1C7016E80637F100160D4 /* Icon-144.png */; };
 		D8A1C7280E80637F000160D3 /* RegisterMonoModules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A1C7240E80637F000160D3 /* RegisterMonoModules.cpp */; };
 		D8A1C72B0E8063A1000160D3 /* libiPhone-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A1C72A0E8063A1000160D3 /* libiPhone-lib.a */; };
-		E591FAD9E9744E2380416C5C /* vg_button_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E95C04AD7094F7E970CE8F4 /* vg_button_close.png */; };
-		EF8DE983FB6F490B9F9477B7 /* ChartBoostManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79A971DE25B943259967BD1E /* ChartBoostManager.mm */; };
-		F2E72957EF57433CBFE865D7 /* VungleManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7CE5F8B8A4EB4810B425D /* VungleManager.mm */; };
-		FDA503380A5E40EDA1D48639 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E586D48FB7074E12B1A630CF /* CoreData.framework */; };
+		E127FED2B9B5408A94E61749 /* FlurryBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C15369F462A4933AFA0723B /* FlurryBinding.m */; };
+		E1CDE539C57E43BDBB43D89C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5791B06B52C9421ABB46BAC0 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E50581E52BFB48B589FA69B2 /* FlurryManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = B79C3744C80F4BEBA3328ED1 /* FlurryManager.mm */; };
+		E710F6F837B147C388CE361F /* AdBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 321718FCC9FF4789A10DAE6E /* AdBinding.m */; };
+		FB82EEB3C31744DE8C019994 /* AdMobBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B3A32D2FAA4BD69E00C287 /* AdMobBinding.m */; };
+		FFB52AD12D354C4891B047B9 /* TapjoyPublisherLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 696D5FDF064A49449CBF394E /* TapjoyPublisherLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,24 +111,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02E5D549518543E8B7ABF184 /* TapjoyConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TapjoyConnect.h; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnect.h; sourceTree = "<group>"; };
+		062979D928A9401C987DD3FC /* ChartBoostManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChartBoostManager.h; path = ../../Assets/Editor/ChartBoost/ChartBoostManager.h; sourceTree = "<group>"; };
+		08446B302988423E95774127 /* vg_button_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vg_button_close.png; path = ../../Assets/Editor/Vungle/SDK/vg_button_close.png; sourceTree = "<group>"; };
+		088E0EDEFD4D4595824A4314 /* vg_button_mute_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vg_button_mute_selected.png; path = ../../Assets/Editor/Vungle/SDK/vg_button_mute_selected.png; sourceTree = "<group>"; };
 		08B24F75137BFDFA00FBA309 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		09BEF0CD97964920A3C880FF /* ChartBoostBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChartBoostBinding.m; path = ../../Assets/Editor/ChartBoost/ChartBoostBinding.m; sourceTree = "<group>"; };
-		0D324D0E6DAD46CEA3FF134B /* TapjoyConnectConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TapjoyConnectConstants.h; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnectConstants.h; sourceTree = "<group>"; };
-		173BA17486014676A5ABC275 /* CBAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBAnalytics.h; path = ../../Assets/Editor/ChartBoost/CBAnalytics.h; sourceTree = "<group>"; };
-		191156AC0030437188AAA8FE /* VGConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGConstants.h; path = ../../Assets/Editor/Vungle/SDK/VGConstants.h; sourceTree = "<group>"; };
-		1CE7CE5F8B8A4EB4810B425D /* VungleManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = VungleManager.mm; path = ../../Assets/Editor/Vungle/VungleManager.mm; sourceTree = "<group>"; };
+		0A45A94C25344A18B1629367 /* AdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdManager.h; path = ../../Assets/Editor/iAd/AdManager.h; sourceTree = "<group>"; };
+		16A010161EF34A8AB01B67A1 /* VGVunglePub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGVunglePub.h; path = ../../Assets/Editor/Vungle/SDK/VGVunglePub.h; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* ssadmanagerios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssadmanagerios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F2226B16B344195A5778A76 /* TapjoyConnectPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TapjoyConnectPlugin.h; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnectPlugin.h; sourceTree = "<group>"; };
-		212D3DC2F37247A988A5064D /* AdMobBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AdMobBinding.m; path = ../../Assets/Editor/AdMob/AdMobBinding.m; sourceTree = "<group>"; };
-		2220C6B6331949318BB54D2F /* libvunglepub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvunglepub.a; path = ../../Assets/Editor/Vungle/SDK/libvunglepub.a; sourceTree = "<group>"; };
-		2AC1208BD17A469281F4BDCD /* VungleBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = VungleBinding.m; path = ../../Assets/Editor/Vungle/VungleBinding.m; sourceTree = "<group>"; };
-		2E95C04AD7094F7E970CE8F4 /* vg_button_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vg_button_close.png; path = ../../Assets/Editor/Vungle/SDK/vg_button_close.png; sourceTree = "<group>"; };
-		4E2750AE03404BFEB93E9222 /* AdBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AdBinding.m; path = ../../Assets/Editor/iAd/AdBinding.m; sourceTree = "<group>"; };
-		51DEF2151778447BBB374C0C /* VGAdType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGAdType.h; path = ../../Assets/Editor/Vungle/SDK/VGAdType.h; sourceTree = "<group>"; };
-		51ED0C8D2BED463282B5F8FB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		546FE3E1452A4D7DBB989A2B /* JSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../../Assets/Editor/ChartBoost/JSONKit.m; sourceTree = "<group>"; };
-		5503D401E3154894AE8DA033 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADBannerViewDelegate.h; path = ../../Assets/Editor/AdMob/SDK/GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		1EBCDEA627774022B58977F2 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADBannerViewDelegate.h; path = ../../Assets/Editor/AdMob/SDK/GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		2B628A05FC0E46D2BCA9CC8B /* TapjoyConnectPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TapjoyConnectPlugin.h; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnectPlugin.h; sourceTree = "<group>"; };
+		2BDEF94EB5EC4B1490F4EF7C /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libChartboost.a; path = ../../Assets/Editor/ChartBoost/libChartboost.a; sourceTree = "<group>"; };
+		2E53A259B5FA4FEE8CCB3567 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		321718FCC9FF4789A10DAE6E /* AdBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AdBinding.m; path = ../../Assets/Editor/iAd/AdBinding.m; sourceTree = "<group>"; };
+		4029F8ACDB654DE4AA41259E /* VungleBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = VungleBinding.m; path = ../../Assets/Editor/Vungle/VungleBinding.m; sourceTree = "<group>"; };
+		4263F6E2D6DC4CD3A37C184F /* FlurryAds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlurryAds.h; path = ../../Assets/Editor/Flurry/SDK/FlurryAds/FlurryAds.h; sourceTree = "<group>"; };
+		44B1BD310ABA4221824CDEE9 /* VGPlayData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGPlayData.h; path = ../../Assets/Editor/Vungle/SDK/VGPlayData.h; sourceTree = "<group>"; };
+		491D2D742B6A41979D7AB2D7 /* VGStatusData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGStatusData.h; path = ../../Assets/Editor/Vungle/SDK/VGStatusData.h; sourceTree = "<group>"; };
+		5328BF1DFDFC4A9A971B7AFE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		5682F4B10F3B34FF007A219C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		5692F3DC0FA9D8E500EBA2F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		56B7959A1442E0F20026B3DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,17 +139,20 @@
 		56DBF99C15E3CDC9007A4A8D /* iPhone_Sensors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhone_Sensors.mm; sourceTree = "<group>"; };
 		56DBF99E15E3CE85007A4A8D /* iPhone_Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Sensors.h; sourceTree = "<group>"; };
 		56FD43950ED4745200FE3770 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		60F07DAF28364D03B9365C1E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		6B7061153AFD4784BF1EC992 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = ../../Assets/Editor/AdMob/SDK/libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		6CCBE3BF88BB4D5B9EC0ACA5 /* TapjoyConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TapjoyConnect.h; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnect.h; sourceTree = "<group>"; };
-		6FAAC563DD474E14963D58C7 /* GADBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = ../../Assets/Editor/AdMob/SDK/GADBannerView.h; sourceTree = "<group>"; };
-		7653CE615A704A1CB6B9C855 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		79A971DE25B943259967BD1E /* ChartBoostManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ChartBoostManager.mm; path = ../../Assets/Editor/ChartBoost/ChartBoostManager.mm; sourceTree = "<group>"; };
-		79CB4AFB2C9944D289E4017E /* Chartboost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Chartboost.h; path = ../../Assets/Editor/ChartBoost/Chartboost.h; sourceTree = "<group>"; };
-		7C507B874BBC447280151167 /* VGStatusData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGStatusData.h; path = ../../Assets/Editor/Vungle/SDK/VGStatusData.h; sourceTree = "<group>"; };
+		5791B06B52C9421ABB46BAC0 /* JSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../../Assets/Editor/ChartBoost/JSONKit.m; sourceTree = "<group>"; };
+		6675C524C3C54EAABF13AAA1 /* CBAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBAnalytics.h; path = ../../Assets/Editor/ChartBoost/CBAnalytics.h; sourceTree = "<group>"; };
+		696D5FDF064A49449CBF394E /* TapjoyPublisherLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = TapjoyPublisherLibrary.a; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyPublisherLibrary.a; sourceTree = "<group>"; };
+		6DDBEAFB66D048358BE7C499 /* GADRequestError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = ../../Assets/Editor/AdMob/SDK/GADRequestError.h; sourceTree = "<group>"; };
+		705A0931499640718E9B0568 /* VGUserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGUserData.h; path = ../../Assets/Editor/Vungle/SDK/VGUserData.h; sourceTree = "<group>"; };
+		76536FB2CA6042A6B80C19B8 /* Flurry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = ../../Assets/Editor/Flurry/SDK/Flurry/Flurry.h; sourceTree = "<group>"; };
+		7A099BEBAF6E4E3283D61E0A /* TapjoyConnectPlugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = TapjoyConnectPlugin.mm; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnectPlugin.mm; sourceTree = "<group>"; };
+		7BDCFDF66F2F4A8387BFBCD8 /* GADRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADRequest.h; path = ../../Assets/Editor/AdMob/SDK/GADRequest.h; sourceTree = "<group>"; };
+		7D4B1C4C1CFB4B6D8A2A7455 /* AdMobManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AdMobManager.mm; path = ../../Assets/Editor/AdMob/AdMobManager.mm; sourceTree = "<group>"; };
 		7F36C10E13C5C673007FBDD9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		7F36C10F13C5C673007FBDD9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		7F36C11013C5C673007FBDD9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		82789726A0BB4124B9D4CE0A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		82EC7C01D9E84285A9B1A4E6 /* ChartBoostManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ChartBoostManager.mm; path = ../../Assets/Editor/ChartBoost/ChartBoostManager.mm; sourceTree = "<group>"; };
 		830B5C100E5ED4C100C7819F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8358D1B70ED1CC3700E3A684 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		83B256E10E62FEA000468741 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -153,6 +161,7 @@
 		83B2574E0E63025400468741 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = usr/lib/libiconv.2.dylib; sourceTree = SDKROOT; };
 		83DEA7410EACED0700D8A291 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		83DEA7420EACED0700D8A291 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		877B7C91EB8442298F4F04B9 /* GADBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = ../../Assets/Editor/AdMob/SDK/GADBannerView.h; sourceTree = "<group>"; };
 		8A0FED471649699200E9727D /* EAGLContextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLContextHelper.h; sourceTree = "<group>"; };
 		8A0FED481649699200E9727D /* EAGLContextHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLContextHelper.mm; sourceTree = "<group>"; };
 		8A142DC41636943E00DD87CA /* Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keyboard.h; sourceTree = "<group>"; };
@@ -166,6 +175,7 @@
 		8A2EF5B61385C5F20070AA2F /* iPhone_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Common.h; sourceTree = "<group>"; };
 		8A3EDDC61615B7C1001839E9 /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		8A3EDDC71615B7C1001839E9 /* SplashScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SplashScreen.mm; sourceTree = "<group>"; };
+		8A41C67E17234B3B92C7785B /* Chartboost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Chartboost.h; path = ../../Assets/Editor/ChartBoost/Chartboost.h; sourceTree = "<group>"; };
 		8A592F4916176267006B38FC /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		8A592F4A16176267006B38FC /* VideoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoViewController.mm; sourceTree = "<group>"; };
 		8A5E0B8F16849D1800CBB6FE /* DisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
@@ -176,28 +186,32 @@
 		8A9FCB121617295F00C05364 /* ActivityIndicator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ActivityIndicator.mm; sourceTree = "<group>"; };
 		8AFA69D7161605E7009663A5 /* iPhone_OrientationSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_OrientationSupport.h; sourceTree = "<group>"; };
 		8AFA69D8161605E7009663A5 /* iPhone_OrientationSupport.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhone_OrientationSupport.mm; sourceTree = "<group>"; };
-		8B45B49573AC4751A478144C /* AdMobManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdMobManager.h; path = ../../Assets/Editor/AdMob/AdMobManager.h; sourceTree = "<group>"; };
+		8C15369F462A4933AFA0723B /* FlurryBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FlurryBinding.m; path = ../../Assets/Editor/Flurry/FlurryBinding.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95CBC1E92EF944788C38045D /* VGPlayData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGPlayData.h; path = ../../Assets/Editor/Vungle/SDK/VGPlayData.h; sourceTree = "<group>"; };
-		96C28B3E607B40EBB85C0285 /* AdManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AdManager.mm; path = ../../Assets/Editor/iAd/AdManager.mm; sourceTree = "<group>"; };
-		9E468DB0BA574EB0996BE0EB /* TapjoyResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapjoyResources.bundle; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyResources.bundle; sourceTree = "<group>"; };
-		A071E12E04154CD399701A9D /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADAdNetworkExtras.h; path = ../../Assets/Editor/AdMob/SDK/GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		A6123F04568844FFB55758D6 /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ../../Assets/Editor/ChartBoost/JSONKit.h; sourceTree = "<group>"; };
-		A9B32858129641DEAB2E8F01 /* TapjoyPublisherLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = TapjoyPublisherLibrary.a; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyPublisherLibrary.a; sourceTree = "<group>"; };
-		ABEF7D7EF9FF49C4A3592A3C /* GADAdSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADAdSize.h; path = ../../Assets/Editor/AdMob/SDK/GADAdSize.h; sourceTree = "<group>"; };
-		AE495E90A797470C92B96AF7 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADInterstitialDelegate.h; path = ../../Assets/Editor/AdMob/SDK/GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		AF654F293BD742EAAC18DE29 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libChartboost.a; path = ../../Assets/Editor/ChartBoost/libChartboost.a; sourceTree = "<group>"; };
-		B7B79359579943ADB08E0EF6 /* VGAssertMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGAssertMacros.h; path = ../../Assets/Editor/Vungle/SDK/VGAssertMacros.h; sourceTree = "<group>"; };
-		B99651323EFD4512B2838A54 /* vunglepub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vunglepub.h; path = ../../Assets/Editor/Vungle/SDK/vunglepub.h; sourceTree = "<group>"; };
-		BED665CDBC7448C8B47AB0BB /* AdMobManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AdMobManager.mm; path = ../../Assets/Editor/AdMob/AdMobManager.mm; sourceTree = "<group>"; };
-		C14C2F6FA4A54F19A6EA7442 /* vg_button_mute_plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vg_button_mute_plain.png; path = ../../Assets/Editor/Vungle/SDK/vg_button_mute_plain.png; sourceTree = "<group>"; };
-		C3285AC199544DBEB4D243F6 /* GADRequestError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = ../../Assets/Editor/AdMob/SDK/GADRequestError.h; sourceTree = "<group>"; };
-		C4F54AC7D96344ED9CF225AC /* ChartBoostManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChartBoostManager.h; path = ../../Assets/Editor/ChartBoost/ChartBoostManager.h; sourceTree = "<group>"; };
-		C80AF560CE304FB0875AF44D /* VungleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VungleManager.h; path = ../../Assets/Editor/Vungle/VungleManager.h; sourceTree = "<group>"; };
-		C870D0BA687F4A0885CF6CE3 /* VGVunglePub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGVunglePub.h; path = ../../Assets/Editor/Vungle/SDK/VGVunglePub.h; sourceTree = "<group>"; };
-		C9773060E0B84B2992490233 /* GADAdMobExtras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADAdMobExtras.h; path = ../../Assets/Editor/AdMob/SDK/GADAdMobExtras.h; sourceTree = "<group>"; };
-		CD9B516672094DD6A8F8A7F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		CF0002A49BC64EF7844EA3B1 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		922F9A4E88F5456584E38DB0 /* VGAssertMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGAssertMacros.h; path = ../../Assets/Editor/Vungle/SDK/VGAssertMacros.h; sourceTree = "<group>"; };
+		9457F999097E4550A66DCEE3 /* FlurryAdDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlurryAdDelegate.h; path = ../../Assets/Editor/Flurry/SDK/FlurryAds/FlurryAdDelegate.h; sourceTree = "<group>"; };
+		9716667D2DC94F98BC6FFBE1 /* GADAdSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADAdSize.h; path = ../../Assets/Editor/AdMob/SDK/GADAdSize.h; sourceTree = "<group>"; };
+		9D128CED22314EAE8A8F3CEA /* VungleManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = VungleManager.mm; path = ../../Assets/Editor/Vungle/VungleManager.mm; sourceTree = "<group>"; };
+		9E324BA4B5B9448588E4B3E2 /* VGConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGConstants.h; path = ../../Assets/Editor/Vungle/SDK/VGConstants.h; sourceTree = "<group>"; };
+		A2331633B7704AE7BE4261C0 /* VGAdType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGAdType.h; path = ../../Assets/Editor/Vungle/SDK/VGAdType.h; sourceTree = "<group>"; };
+		A27411E28F35455FB32D2167 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADAdNetworkExtras.h; path = ../../Assets/Editor/AdMob/SDK/GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		A519E343B361426A8021329B /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry.a; path = ../../Assets/Editor/Flurry/SDK/Flurry/libFlurry.a; sourceTree = "<group>"; };
+		AB869A9681F44D67A9B5B33E /* TapjoyConnectConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TapjoyConnectConstants.h; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnectConstants.h; sourceTree = "<group>"; };
+		ADB506CEC82E4DECAA82E3DE /* VungleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VungleManager.h; path = ../../Assets/Editor/Vungle/VungleManager.h; sourceTree = "<group>"; };
+		AE44A53679E04E959369D58B /* FlurryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlurryManager.h; path = ../../Assets/Editor/Flurry/FlurryManager.h; sourceTree = "<group>"; };
+		AF07AEF01E04431AA9C26DB4 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = ../../Assets/Editor/AdMob/SDK/libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		B0C9EAF4E8D541918D20586B /* libvunglepub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvunglepub.a; path = ../../Assets/Editor/Vungle/SDK/libvunglepub.a; sourceTree = "<group>"; };
+		B2F837F41D564E74AE957A19 /* FlurryCustomAdNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlurryCustomAdNetwork.h; path = ../../Assets/Editor/Flurry/SDK/Mediation/FlurryCustomAdNetwork.h; sourceTree = "<group>"; };
+		B79C3744C80F4BEBA3328ED1 /* FlurryManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FlurryManager.mm; path = ../../Assets/Editor/Flurry/FlurryManager.mm; sourceTree = "<group>"; };
+		BB9F4585D6FB49649D2CC2EE /* ChartBoostBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ChartBoostBinding.m; path = ../../Assets/Editor/ChartBoost/ChartBoostBinding.m; sourceTree = "<group>"; };
+		C24B003AE53A4084939C5F60 /* vg_button_mute_plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vg_button_mute_plain.png; path = ../../Assets/Editor/Vungle/SDK/vg_button_mute_plain.png; sourceTree = "<group>"; };
+		C2B97504D8714BF7B11ABE74 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		C2E05885B7C74BAD8AE5B5CF /* GADAdMobExtras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADAdMobExtras.h; path = ../../Assets/Editor/AdMob/SDK/GADAdMobExtras.h; sourceTree = "<group>"; };
+		CC111604056D465B93B9617C /* AdMobManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdMobManager.h; path = ../../Assets/Editor/AdMob/AdMobManager.h; sourceTree = "<group>"; };
+		CED067390A314AC39FF63CE4 /* TapjoyResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapjoyResources.bundle; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyResources.bundle; sourceTree = "<group>"; };
+		CFB639081C7B42CCB1B2FC04 /* GADInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = ../../Assets/Editor/AdMob/SDK/GADInterstitial.h; sourceTree = "<group>"; };
+		D012A884B8FB4A098C97E4FC /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ../../Assets/Editor/ChartBoost/JSONKit.h; sourceTree = "<group>"; };
+		D38CF52CB4934CAB88A8586C /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADInterstitialDelegate.h; path = ../../Assets/Editor/AdMob/SDK/GADInterstitialDelegate.h; sourceTree = "<group>"; };
 		D82DCFB60E8000A5005D6AD8 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = Classes/AppController.h; sourceTree = SOURCE_ROOT; };
 		D82DCFB70E8000A5005D6AD8 /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = Classes/AppController.mm; sourceTree = SOURCE_ROOT; };
 		D82DCFBA0E8000A5005D6AD8 /* iPhone_target_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iPhone_target_Prefix.pch; path = Classes/iPhone_target_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -230,14 +244,15 @@
 		D8A1C7240E80637F000160D3 /* RegisterMonoModules.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RegisterMonoModules.cpp; path = Libraries/RegisterMonoModules.cpp; sourceTree = SOURCE_ROOT; };
 		D8A1C7250E80637F000160D3 /* RegisterMonoModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterMonoModules.h; path = Libraries/RegisterMonoModules.h; sourceTree = SOURCE_ROOT; };
 		D8A1C72A0E8063A1000160D3 /* libiPhone-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiPhone-lib.a"; path = "Libraries/libiPhone-lib.a"; sourceTree = SOURCE_ROOT; };
-		DE731ADBA41F4BEDA4848B45 /* AdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdManager.h; path = ../../Assets/Editor/iAd/AdManager.h; sourceTree = "<group>"; };
-		E586D48FB7074E12B1A630CF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		E9A7B1729DF34A7DA8938C3D /* libAdapterIAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdapterIAd.a; path = ../../Assets/Editor/AdMob/SDK/libAdapterIAd.a; sourceTree = "<group>"; };
-		E9FF7A8C90334EFCBD80E978 /* GADInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = ../../Assets/Editor/AdMob/SDK/GADInterstitial.h; sourceTree = "<group>"; };
-		F78CCAC9647645978A33F063 /* TapjoyConnectPlugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = TapjoyConnectPlugin.mm; path = ../../Assets/Editor/Tapjoy/iOS/TapjoyConnectPlugin.mm; sourceTree = "<group>"; };
-		F81445CC16CA46BA89D6A604 /* GADRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GADRequest.h; path = ../../Assets/Editor/AdMob/SDK/GADRequest.h; sourceTree = "<group>"; };
-		F90DA04801C445A7B922D4FB /* VGUserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VGUserData.h; path = ../../Assets/Editor/Vungle/SDK/VGUserData.h; sourceTree = "<group>"; };
-		FD37267436A042C58A9EA98B /* vg_button_mute_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vg_button_mute_selected.png; path = ../../Assets/Editor/Vungle/SDK/vg_button_mute_selected.png; sourceTree = "<group>"; };
+		E1B3A32D2FAA4BD69E00C287 /* AdMobBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AdMobBinding.m; path = ../../Assets/Editor/AdMob/AdMobBinding.m; sourceTree = "<group>"; };
+		E8336F0F1FC84E3DA981F213 /* FlurryCustomAdNetworkDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlurryCustomAdNetworkDelegate.h; path = ../../Assets/Editor/Flurry/SDK/Mediation/FlurryCustomAdNetworkDelegate.h; sourceTree = "<group>"; };
+		ED3BD681F0DF4DA483D99F4F /* AdManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AdManager.mm; path = ../../Assets/Editor/iAd/AdManager.mm; sourceTree = "<group>"; };
+		EF33DAAF7DB74AA3A761C910 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F0ED268768484177A7E0091E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F60AB277724346FEB8E94F9B /* vunglepub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vunglepub.h; path = ../../Assets/Editor/Vungle/SDK/vunglepub.h; sourceTree = "<group>"; };
+		F84622C6E60C49AF9A2F5AA4 /* libAdapterIAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdapterIAd.a; path = ../../Assets/Editor/AdMob/SDK/libAdapterIAd.a; sourceTree = "<group>"; };
+		F983FCC514884B7191356376 /* libFlurryAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurryAds.a; path = ../../Assets/Editor/Flurry/SDK/FlurryAds/libFlurryAds.a; sourceTree = "<group>"; };
+		FE5460DB4FE140C89B639530 /* FlurryCustomAdNetworkProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlurryCustomAdNetworkProperties.h; path = ../../Assets/Editor/Flurry/SDK/Mediation/FlurryCustomAdNetworkProperties.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,42 +281,35 @@
 				56B7959B1442E0F20026B3DD /* CoreGraphics.framework in Frameworks */,
 				56B7960F1442E1770026B3DD /* CoreMotion.framework in Frameworks */,
 				56B7961A1442E1B80026B3DD /* GameKit.framework in Frameworks */,
-				58F0E8FBDE0B412D86AFA9C7 /* CoreTelephony.framework in Frameworks */,
-				0479F975F1274E1A9AA7A56A /* AdSupport.framework in Frameworks */,
-				8F0F6F01D6504E5A8F5925FC /* TapjoyPublisherLibrary.a in Frameworks */,
-				087595F5F96B4542999858F9 /* StoreKit.framework in Frameworks */,
-				FDA503380A5E40EDA1D48639 /* CoreData.framework in Frameworks */,
-				1BB01759A1A74B108C35CB23 /* MessageUI.framework in Frameworks */,
-				602493C5B2BE47158759D570 /* libAdapterIAd.a in Frameworks */,
-				121443679E6E4928A4B18E84 /* libGoogleAdMobAds.a in Frameworks */,
-				AEF7259BF9894F4181EBE1FC /* libChartboost.a in Frameworks */,
-				829FA2071B504EA8AE83218A /* libvunglepub.a in Frameworks */,
-				55B89852AE824496B0349B68 /* libz.1.1.3.dylib in Frameworks */,
+				C0F78C3942E945649A157A9A /* CoreTelephony.framework in Frameworks */,
+				CC70CF7577694C968B17BA88 /* AdSupport.framework in Frameworks */,
+				FFB52AD12D354C4891B047B9 /* TapjoyPublisherLibrary.a in Frameworks */,
+				66B6920918A042FD9BFA8F01 /* StoreKit.framework in Frameworks */,
+				651B93FEB28B4F1BBF09A1BA /* CoreData.framework in Frameworks */,
+				14DAB95CF61A4E3C96E6D965 /* MessageUI.framework in Frameworks */,
+				401A0233ABB4487582F80FC7 /* libAdapterIAd.a in Frameworks */,
+				1554ACE923604DCD914D9357 /* libGoogleAdMobAds.a in Frameworks */,
+				53AAAF6B8A8B4CDF87A0874F /* libChartboost.a in Frameworks */,
+				8A73DFE58B27496AAF48DC57 /* libFlurry.a in Frameworks */,
+				73C0709A7A5F4333BFC06338 /* libFlurryAds.a in Frameworks */,
+				746BF59FC43740F59F9519F8 /* libvunglepub.a in Frameworks */,
+				2891174783B74764991CF75A /* libz.1.1.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C13C85D75C743559B711887 /* Vungle */ = {
+		13F14EFFD5F347E4B14AA506 /* Tapjoy */ = {
 			isa = PBXGroup;
 			children = (
-				1CE7CE5F8B8A4EB4810B425D /* VungleManager.mm */,
-				C80AF560CE304FB0875AF44D /* VungleManager.h */,
-				2AC1208BD17A469281F4BDCD /* VungleBinding.m */,
-				B99651323EFD4512B2838A54 /* vunglepub.h */,
-				C870D0BA687F4A0885CF6CE3 /* VGVunglePub.h */,
-				F90DA04801C445A7B922D4FB /* VGUserData.h */,
-				7C507B874BBC447280151167 /* VGStatusData.h */,
-				95CBC1E92EF944788C38045D /* VGPlayData.h */,
-				191156AC0030437188AAA8FE /* VGConstants.h */,
-				B7B79359579943ADB08E0EF6 /* VGAssertMacros.h */,
-				51DEF2151778447BBB374C0C /* VGAdType.h */,
-				FD37267436A042C58A9EA98B /* vg_button_mute_selected.png */,
-				C14C2F6FA4A54F19A6EA7442 /* vg_button_mute_plain.png */,
-				2E95C04AD7094F7E970CE8F4 /* vg_button_close.png */,
+				CED067390A314AC39FF63CE4 /* TapjoyResources.bundle */,
+				7A099BEBAF6E4E3283D61E0A /* TapjoyConnectPlugin.mm */,
+				2B628A05FC0E46D2BCA9CC8B /* TapjoyConnectPlugin.h */,
+				AB869A9681F44D67A9B5B33E /* TapjoyConnectConstants.h */,
+				02E5D549518543E8B7ABF184 /* TapjoyConnect.h */,
 			);
-			name = Vungle;
+			name = Tapjoy;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -312,14 +320,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		22C06AA633844DA5A28A0677 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				FE5460DB4FE140C89B639530 /* FlurryCustomAdNetworkProperties.h */,
+				E8336F0F1FC84E3DA981F213 /* FlurryCustomAdNetworkDelegate.h */,
+				B2F837F41D564E74AE957A19 /* FlurryCustomAdNetwork.h */,
+				4263F6E2D6DC4CD3A37C184F /* FlurryAds.h */,
+				9457F999097E4550A66DCEE3 /* FlurryAdDelegate.h */,
+				76536FB2CA6042A6B80C19B8 /* Flurry.h */,
+				B79C3744C80F4BEBA3328ED1 /* FlurryManager.mm */,
+				AE44A53679E04E959369D58B /* FlurryManager.h */,
+				8C15369F462A4933AFA0723B /* FlurryBinding.m */,
+			);
+			name = Flurry;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				0C13C85D75C743559B711887 /* Vungle */,
-				B92954B25EA64A7FA9A3FD55 /* iAd */,
-				56747A90C2EA4F388550D662 /* ChartBoost */,
-				588405928150429AA680F86B /* AdMob */,
-				79D46EEB10F44268AFEAA8C9 /* Tapjoy */,
+				6EF80E887C4E4056A56EE62E /* Vungle */,
+				F4A7067998D24D27B9A651A5 /* iAd */,
+				22C06AA633844DA5A28A0677 /* Flurry */,
+				FBA003B395B74A658E608E5B /* ChartBoost */,
+				F18E729E0FE840A799DB1DBC /* AdMob */,
+				13F14EFFD5F347E4B14AA506 /* Tapjoy */,
 				56BCBA380FCF049A0030C3B2 /* SystemConfiguration.framework */,
 				5692F3DC0FA9D8E500EBA2F1 /* CoreLocation.framework */,
 				5682F4B10F3B34FF007A219C /* MediaPlayer.framework */,
@@ -351,65 +376,43 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CF0002A49BC64EF7844EA3B1 /* libz.1.1.3.dylib */,
-				2220C6B6331949318BB54D2F /* libvunglepub.a */,
-				AF654F293BD742EAAC18DE29 /* libChartboost.a */,
-				6B7061153AFD4784BF1EC992 /* libGoogleAdMobAds.a */,
-				E9A7B1729DF34A7DA8938C3D /* libAdapterIAd.a */,
-				CD9B516672094DD6A8F8A7F5 /* MessageUI.framework */,
-				E586D48FB7074E12B1A630CF /* CoreData.framework */,
-				7653CE615A704A1CB6B9C855 /* StoreKit.framework */,
-				A9B32858129641DEAB2E8F01 /* TapjoyPublisherLibrary.a */,
-				60F07DAF28364D03B9365C1E /* AdSupport.framework */,
-				51ED0C8D2BED463282B5F8FB /* CoreTelephony.framework */,
+				C2B97504D8714BF7B11ABE74 /* libz.1.1.3.dylib */,
+				B0C9EAF4E8D541918D20586B /* libvunglepub.a */,
+				F983FCC514884B7191356376 /* libFlurryAds.a */,
+				A519E343B361426A8021329B /* libFlurry.a */,
+				2BDEF94EB5EC4B1490F4EF7C /* libChartboost.a */,
+				AF07AEF01E04431AA9C26DB4 /* libGoogleAdMobAds.a */,
+				F84622C6E60C49AF9A2F5AA4 /* libAdapterIAd.a */,
+				F0ED268768484177A7E0091E /* MessageUI.framework */,
+				2E53A259B5FA4FEE8CCB3567 /* CoreData.framework */,
+				82789726A0BB4124B9D4CE0A /* StoreKit.framework */,
+				696D5FDF064A49449CBF394E /* TapjoyPublisherLibrary.a */,
+				EF33DAAF7DB74AA3A761C910 /* AdSupport.framework */,
+				5328BF1DFDFC4A9A971B7AFE /* CoreTelephony.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		56747A90C2EA4F388550D662 /* ChartBoost */ = {
+		6EF80E887C4E4056A56EE62E /* Vungle */ = {
 			isa = PBXGroup;
 			children = (
-				546FE3E1452A4D7DBB989A2B /* JSONKit.m */,
-				A6123F04568844FFB55758D6 /* JSONKit.h */,
-				79A971DE25B943259967BD1E /* ChartBoostManager.mm */,
-				C4F54AC7D96344ED9CF225AC /* ChartBoostManager.h */,
-				09BEF0CD97964920A3C880FF /* ChartBoostBinding.m */,
-				79CB4AFB2C9944D289E4017E /* Chartboost.h */,
-				173BA17486014676A5ABC275 /* CBAnalytics.h */,
+				9D128CED22314EAE8A8F3CEA /* VungleManager.mm */,
+				ADB506CEC82E4DECAA82E3DE /* VungleManager.h */,
+				4029F8ACDB654DE4AA41259E /* VungleBinding.m */,
+				F60AB277724346FEB8E94F9B /* vunglepub.h */,
+				16A010161EF34A8AB01B67A1 /* VGVunglePub.h */,
+				705A0931499640718E9B0568 /* VGUserData.h */,
+				491D2D742B6A41979D7AB2D7 /* VGStatusData.h */,
+				44B1BD310ABA4221824CDEE9 /* VGPlayData.h */,
+				9E324BA4B5B9448588E4B3E2 /* VGConstants.h */,
+				922F9A4E88F5456584E38DB0 /* VGAssertMacros.h */,
+				A2331633B7704AE7BE4261C0 /* VGAdType.h */,
+				088E0EDEFD4D4595824A4314 /* vg_button_mute_selected.png */,
+				C24B003AE53A4084939C5F60 /* vg_button_mute_plain.png */,
+				08446B302988423E95774127 /* vg_button_close.png */,
 			);
-			name = ChartBoost;
-			sourceTree = "<group>";
-		};
-		588405928150429AA680F86B /* AdMob */ = {
-			isa = PBXGroup;
-			children = (
-				C3285AC199544DBEB4D243F6 /* GADRequestError.h */,
-				F81445CC16CA46BA89D6A604 /* GADRequest.h */,
-				AE495E90A797470C92B96AF7 /* GADInterstitialDelegate.h */,
-				E9FF7A8C90334EFCBD80E978 /* GADInterstitial.h */,
-				5503D401E3154894AE8DA033 /* GADBannerViewDelegate.h */,
-				6FAAC563DD474E14963D58C7 /* GADBannerView.h */,
-				ABEF7D7EF9FF49C4A3592A3C /* GADAdSize.h */,
-				A071E12E04154CD399701A9D /* GADAdNetworkExtras.h */,
-				C9773060E0B84B2992490233 /* GADAdMobExtras.h */,
-				BED665CDBC7448C8B47AB0BB /* AdMobManager.mm */,
-				8B45B49573AC4751A478144C /* AdMobManager.h */,
-				212D3DC2F37247A988A5064D /* AdMobBinding.m */,
-			);
-			name = AdMob;
-			sourceTree = "<group>";
-		};
-		79D46EEB10F44268AFEAA8C9 /* Tapjoy */ = {
-			isa = PBXGroup;
-			children = (
-				9E468DB0BA574EB0996BE0EB /* TapjoyResources.bundle */,
-				F78CCAC9647645978A33F063 /* TapjoyConnectPlugin.mm */,
-				1F2226B16B344195A5778A76 /* TapjoyConnectPlugin.h */,
-				0D324D0E6DAD46CEA3FF134B /* TapjoyConnectConstants.h */,
-				6CCBE3BF88BB4D5B9EC0ACA5 /* TapjoyConnect.h */,
-			);
-			name = Tapjoy;
+			name = Vungle;
 			sourceTree = "<group>";
 		};
 		8A3EDDC51615B7C1001839E9 /* UI */ = {
@@ -440,16 +443,6 @@
 				8A1FFFAC16512A9000DD0934 /* GlesHelper.mm */,
 			);
 			path = Unity;
-			sourceTree = "<group>";
-		};
-		B92954B25EA64A7FA9A3FD55 /* iAd */ = {
-			isa = PBXGroup;
-			children = (
-				96C28B3E607B40EBB85C0285 /* AdManager.mm */,
-				DE731ADBA41F4BEDA4848B45 /* AdManager.h */,
-				4E2750AE03404BFEB93E9222 /* AdBinding.m */,
-			);
-			name = iAd;
 			sourceTree = "<group>";
 		};
 		D82DCFB50E8000A5005D6AD8 /* Classes */ = {
@@ -509,6 +502,49 @@
 			path = Libraries;
 			sourceTree = SOURCE_ROOT;
 		};
+		F18E729E0FE840A799DB1DBC /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				6DDBEAFB66D048358BE7C499 /* GADRequestError.h */,
+				7BDCFDF66F2F4A8387BFBCD8 /* GADRequest.h */,
+				D38CF52CB4934CAB88A8586C /* GADInterstitialDelegate.h */,
+				CFB639081C7B42CCB1B2FC04 /* GADInterstitial.h */,
+				1EBCDEA627774022B58977F2 /* GADBannerViewDelegate.h */,
+				877B7C91EB8442298F4F04B9 /* GADBannerView.h */,
+				9716667D2DC94F98BC6FFBE1 /* GADAdSize.h */,
+				A27411E28F35455FB32D2167 /* GADAdNetworkExtras.h */,
+				C2E05885B7C74BAD8AE5B5CF /* GADAdMobExtras.h */,
+				7D4B1C4C1CFB4B6D8A2A7455 /* AdMobManager.mm */,
+				CC111604056D465B93B9617C /* AdMobManager.h */,
+				E1B3A32D2FAA4BD69E00C287 /* AdMobBinding.m */,
+			);
+			name = AdMob;
+			sourceTree = "<group>";
+		};
+		F4A7067998D24D27B9A651A5 /* iAd */ = {
+			isa = PBXGroup;
+			children = (
+				ED3BD681F0DF4DA483D99F4F /* AdManager.mm */,
+				0A45A94C25344A18B1629367 /* AdManager.h */,
+				321718FCC9FF4789A10DAE6E /* AdBinding.m */,
+			);
+			name = iAd;
+			sourceTree = "<group>";
+		};
+		FBA003B395B74A658E608E5B /* ChartBoost */ = {
+			isa = PBXGroup;
+			children = (
+				5791B06B52C9421ABB46BAC0 /* JSONKit.m */,
+				D012A884B8FB4A098C97E4FC /* JSONKit.h */,
+				82EC7C01D9E84285A9B1A4E6 /* ChartBoostManager.mm */,
+				062979D928A9401C987DD3FC /* ChartBoostManager.h */,
+				BB9F4585D6FB49649D2CC2EE /* ChartBoostBinding.m */,
+				8A41C67E17234B3B92C7785B /* Chartboost.h */,
+				6675C524C3C54EAABF13AAA1 /* CBAnalytics.h */,
+			);
+			name = ChartBoost;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -562,10 +598,10 @@
 			files = (
 				83DEA7430EACED0700D8A291 /* Default.png in Resources */,
 				83DEA7440EACED0700D8A291 /* Icon.png in Resources */,
-				3EC6A1CF9CEB40E3852C355F /* TapjoyResources.bundle in Resources */,
-				E591FAD9E9744E2380416C5C /* vg_button_close.png in Resources */,
-				20B8D7EF4A844655B0DF147D /* vg_button_mute_plain.png in Resources */,
-				46D515FE5653435CA52C3842 /* vg_button_mute_selected.png in Resources */,
+				0C80D26D72E34EBB9858B573 /* TapjoyResources.bundle in Resources */,
+				03B622352BD648E29A68D06A /* vg_button_close.png in Resources */,
+				536FF2D58A56418EAC027091 /* vg_button_mute_plain.png in Resources */,
+				BF6C0CCD112743DC86A2069F /* vg_button_mute_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,16 +665,18 @@
 				8A0FED491649699200E9727D /* EAGLContextHelper.mm in Sources */,
 				8A1FFFAD16512A9000DD0934 /* GlesHelper.mm in Sources */,
 				8A5E0B9116849D1800CBB6FE /* DisplayManager.mm in Sources */,
-				BB0CB743A23F4D81B93CAA55 /* TapjoyConnectPlugin.mm in Sources */,
-				0D3F08EBC3D141A2A49FBAAF /* AdMobBinding.m in Sources */,
-				31573AD3817A4BB4842CE416 /* AdMobManager.mm in Sources */,
-				CAAB8A930BE94F27AAD42F75 /* ChartBoostBinding.m in Sources */,
-				EF8DE983FB6F490B9F9477B7 /* ChartBoostManager.mm in Sources */,
-				938D77711D1F43618E30FEBD /* JSONKit.m in Sources */,
-				39E427B271EE496795C47E57 /* AdBinding.m in Sources */,
-				B10CE91B8E7343B5A0F79740 /* AdManager.mm in Sources */,
-				9530DB70F0C444CF98279725 /* VungleBinding.m in Sources */,
-				F2E72957EF57433CBFE865D7 /* VungleManager.mm in Sources */,
+				C5CB300777B8418799E69309 /* TapjoyConnectPlugin.mm in Sources */,
+				FB82EEB3C31744DE8C019994 /* AdMobBinding.m in Sources */,
+				5BE764B209E143A298AC4671 /* AdMobManager.mm in Sources */,
+				5D73D8A7F1B9411B9DF02A16 /* ChartBoostBinding.m in Sources */,
+				717D97638AE54C3DBEC71098 /* ChartBoostManager.mm in Sources */,
+				E1CDE539C57E43BDBB43D89C /* JSONKit.m in Sources */,
+				E127FED2B9B5408A94E61749 /* FlurryBinding.m in Sources */,
+				E50581E52BFB48B589FA69B2 /* FlurryManager.mm in Sources */,
+				E710F6F837B147C388CE361F /* AdBinding.m in Sources */,
+				9F8FAA7A53324FF8B5F25CC1 /* AdManager.mm in Sources */,
+				113DC62CB58845B8848235C0 /* VungleBinding.m in Sources */,
+				BE6675BFD92C46AB9CDFB30A /* VungleManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +699,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Vungle/\"/**",
+					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Flurry/\"/**",
+					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Flurry/\"/**",
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/ChartBoost/\"/**",
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/AdMob/\"/**",
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/AdMob/\"/**",
@@ -698,6 +738,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Vungle/\"/**",
+					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Flurry/\"/**",
+					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/Flurry/\"/**",
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/ChartBoost/\"/**",
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/AdMob/\"/**",
 					"\"/Users/freddeyles/Desktop/Current Work/unity-admanager/SSAdManager-iOS/Assets/Editor/AdMob/\"/**",

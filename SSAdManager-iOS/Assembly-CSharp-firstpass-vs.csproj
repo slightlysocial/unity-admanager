@@ -48,6 +48,8 @@
      <Compile Include="Assets\Plugins\AdMob\AdMobManager.cs" />
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostBinding.cs" />
      <Compile Include="Assets\Plugins\ChartBoost\ChartBoostManager.cs" />
+     <Compile Include="Assets\Plugins\Flurry\FlurryBinding.cs" />
+     <Compile Include="Assets\Plugins\Flurry\FlurryManager.cs" />
      <Compile Include="Assets\Plugins\IRevMobListener.cs" />
      <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenBinding.cs" />
      <Compile Include="Assets\Plugins\PlayHaven\Scripts\PlayHavenContentRequester.cs" />
@@ -73,6 +75,7 @@
      <Compile Include="Assets\Plugins\iOS\RevMobIosFullscreen.cs" />
      <Compile Include="Assets\Plugins\iOS\RevMobIosLink.cs" />
      <Compile Include="Assets\Plugins\iOS\RevMobIosNotification.cs" />
+     <None Include="Assets\Editor\Flurry\SDK\Flurry-LICENSE.txt" />
  <Reference Include="Assets\Plugins\P31RestKit">
  <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
  </Reference>

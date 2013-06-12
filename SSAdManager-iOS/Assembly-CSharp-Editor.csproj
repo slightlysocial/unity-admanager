@@ -48,6 +48,7 @@
      <Compile Include="Assets\Editor\PlayHaven\PlayHavenContentRequesterEditor.cs" />
      <Compile Include="Assets\Editor\PlayHaven\PlayHavenManagerEditor.cs" />
      <Compile Include="Assets\Editor\PlayHaven\PlayHavenTriggerWindow.cs" />
+     <None Include="Assets\Editor\Flurry\SDK\Flurry-LICENSE.txt" />
  <Reference Include="Assets\Editor\PlayHaven\PlayHavenEditor">
  <HintPath>Assets\Editor\PlayHaven\PlayHavenEditor.dll</HintPath>
  </Reference>
