@@ -303,7 +303,7 @@ public class SSAdManager : MonoBehaviour {
 	
 	public static void showVungleAd()
 	{
-		//if(SSAdInitializer.VungleActiveStaticFlag)
-			//VungleBinding.playModalAd(true);
+		if(SSAdInitializer.VungleActiveStaticFlag)
+			SSAdInitializer.vungleSession.displayAdvert();
 	}
 }

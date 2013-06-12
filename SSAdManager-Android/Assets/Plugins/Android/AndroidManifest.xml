@@ -69,11 +69,17 @@ android:launchMode="singleTop">
 <!-- PlayHaven -->
 
 <activity android:name="com.playhaven.src.publishersdk.content.PHContentView" android:theme="@android:style/Theme.Dialog" android:label="@string/app_name" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:screenOrientation="sensor">
-    </activity>		
+    </activity>	
+	
+	<!-- TapJoy -->
+
+<!-- Vungle -->
+
+ <activity android:name="com.vungle.sdk.VungleAdvert" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait" />		
 
 </application>
 
-<!-- TapJoy -->
+
 
 	
 

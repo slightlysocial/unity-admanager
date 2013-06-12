@@ -52,6 +52,7 @@
      <Compile Include="Assets\Plugins\Android\RevMobAndroidLink.cs" />
      <Compile Include="Assets\Plugins\Android\RevMobAndroidNotification.cs" />
      <Compile Include="Assets\Plugins\Android\RevMobAndroidPopup.cs" />
+     <Compile Include="Assets\Plugins\Android\VungleWarpper.cs" />
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroid.cs" />
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroidManager.cs" />
      <Compile Include="Assets\Plugins\IRevMobListener.cs" />

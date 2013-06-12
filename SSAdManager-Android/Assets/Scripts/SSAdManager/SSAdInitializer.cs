@@ -43,6 +43,7 @@ public class SSAdInitializer : MonoBehaviour {
 	public bool VungleActiveFlag;						//Do you want Vungle activated in this project?
 	public static bool VungleActiveStaticFlag;			//Add condition of Vungle Active Flag to this
 	public string VungleID = "";						//Vungle ID
+	public static VungleWarpper vungleSession;
 	
 	//Flurry variables
 	public bool FlurryActiveFlag;						//Do you want Flurry activated in this project?
@@ -107,6 +108,9 @@ public class SSAdInitializer : MonoBehaviour {
 		if(VungleActiveFlag)
 		{
 			//VungleBinding.startWithAppId(VungleID);	
+			vungleSession = new VungleWarpper();
+			vungleSession.init(VungleID);
+			Debug.Log("Worked");
 		}
 		
 		//Initialize Flurry
