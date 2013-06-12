@@ -49,6 +49,7 @@ public class SSAdInitializer : MonoBehaviour {
 	public bool FlurryActiveFlag;						//Do you want Flurry activated in this project?
 	public static bool FlurryActiveStaticFlag;			//Add condition of Flurry Active Flag to this
 	public string FlurryID = "";						//Flurry ID
+	public static FlurryAgent flurrySession;
 	
 	
 	// Use this for initialization
@@ -100,14 +101,12 @@ public class SSAdInitializer : MonoBehaviour {
 		//Initialize TapJoy
 		if(TapJoyActiveFlag)
 		{
-			//TapjoyPluginIOS.RequestTapjoyConnect(TapJoyID, TapJoySecretKey);
 			TapjoyPluginAndroid.RequestTapjoyConnect(TapJoyID, TapJoySecretKey);
 		}
 		
 		//Initialize Vungle
 		if(VungleActiveFlag)
-		{
-			//VungleBinding.startWithAppId(VungleID);	
+		{	
 			vungleSession = new VungleWarpper();
 			vungleSession.init(VungleID);
 			Debug.Log("Worked");
@@ -116,8 +115,8 @@ public class SSAdInitializer : MonoBehaviour {
 		//Initialize Flurry
 		if(FlurryActiveFlag)
 		{
-			//FlurryBinding.startSession(FlurryID);
-			//FlurryBinding.logEvent("Testing session started", false);
+			flurrySession = new FlurryAgent();
+			flurrySession.onStartSession(FlurryID);
 		}
 	}
 	
