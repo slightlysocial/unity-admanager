@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SSAdManager : MonoBehaviour {
+public class SSAdManager : MonoBehaviour, IRevMobListener{
 	
 	//PlayHaven variables
 	public static bool PlayHavenRunFullScreenAd;							//Enables/disables Full screen ad in Update method
@@ -61,6 +61,17 @@ public class SSAdManager : MonoBehaviour {
 		PListStaticURL = PListURL;
 		CurrentStaticVersionNumber = CurrentVersionNumber;
 		//Debug.Log(PListStaticURL);
+		
+		//Set FailOvers
+		//Chartboost
+		ChartBoostManager.didFailToLoadInterstitialEvent += didFailToLoadChartBoostAd;
+		//Revmob
+		//Implemented as inheritance
+		//Admob
+		AdMobManager.adViewFailedToReceiveAdEvent += didFailToLoadAdMobAd;
+		//Playhaven
+		
+		//Vungle
 		
 	}
 	
@@ -247,7 +258,11 @@ public class SSAdManager : MonoBehaviour {
 	{
 		if(SSAdInitializer.ChartBoostActiveStaticFlag)
 		{
-			ChartBoostBinding.showInterstitial(null);	
+			ChartBoostBinding.showInterstitial(null);
+			//if(ChartBoostManager.didCacheInterstitialEvent)
+			//{
+				//Debug.Log("YEPPPPPPPPPPPPP");	
+			//}
 		}
 	}
 	
@@ -303,7 +318,59 @@ public class SSAdManager : MonoBehaviour {
 
 	public static void showVungleAd()
 	{
-		if(SSAdInitializer.VungleActiveStaticFlag)
-			VungleBinding.playModalAd(true);
+		if(SSAdInitializer.VungleActiveStaticFlag){
+			if(VungleBinding.isAdAvailable()){
+				VungleBinding.playModalAd(true);
+			}
+			else{
+				ShowAd (adOnGameOverFail);
+			}
+		}
 	}
+	
+	/*FailOver Methods */
+	public static void didFailToLoadChartBoostAd(string location)
+	{
+		ShowAd(adOnLoadFail);
+	}
+	
+	//Revmob
+	
+	 #region IRevMobListener implementation
+	public void RevMobAdDidReceive (string revMobAdType) {
+        Debug.Log("Ad did receive.");
+    }
+
+    public void RevMobAdDidFail (string revMobAdType) {
+        Debug.Log("Ad did fail.");
+		ShowAd (adOnLoadFail);
+    }
+
+    public void RevMobAdDisplayed (string revMobAdType) {
+        Debug.Log("Ad displayed.");
+    }
+
+    public void RevMobUserClickedInTheAd (string revMobAdType) {
+        Debug.Log("Ad clicked.");
+    }
+
+    public void RevMobUserClosedTheAd (string revMobAdType) {
+        Debug.Log("Ad closed.");
+    }
+	
+	public void RevMobInstallDidReceive(string message){
+		Debug.Log("Install Received!");
+	}
+	
+	public void RevMobInstallDidFail(string message){
+		Debug.Log("Install failed.");
+	}
+    #endregion
+	
+	//Admob
+	public static void didFailToLoadAdMobAd(string error)
+	{
+		ShowAd(adBannerFail);
+	}
+
 }

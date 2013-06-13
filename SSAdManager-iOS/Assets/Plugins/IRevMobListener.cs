@@ -2,19 +2,19 @@ using System;
 
 public interface IRevMobListener
 {
-	void AdDidReceive(string revMobAdType);
+	void RevMobAdDidReceive(string revMobAdType);
 
-	void AdDidFail(string revMobAdType);
+	void RevMobAdDidFail(string revMobAdType);
 
-	void AdDisplayed(string revMobAdType);
+	void RevMobAdDisplayed(string revMobAdType);
 
-	void UserClickedInTheAd(string revMobAdType);
+	void RevMobUserClickedInTheAd(string revMobAdType);
 
-	void UserClosedTheAd(string revMobAdType);
+	void RevMobUserClosedTheAd(string revMobAdType);
 
-	void InstallDidReceive(string message);
+	void RevMobInstallDidReceive(string message);
 
-	void InstallDidFail(string message);
+	void RevMobInstallDidFail(string message);
 }
 
 

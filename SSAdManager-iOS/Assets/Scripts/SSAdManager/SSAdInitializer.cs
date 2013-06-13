@@ -112,7 +112,7 @@ public class SSAdInitializer : MonoBehaviour {
 		if(FlurryActiveFlag)
 		{
 			FlurryBinding.startSession(FlurryID);
-			FlurryBinding.logEvent("Testing session started", false);
+			//FlurryBinding.logEvent("Testing session started", false);
 		}
 	}
 	
