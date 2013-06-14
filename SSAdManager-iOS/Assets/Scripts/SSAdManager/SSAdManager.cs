@@ -71,7 +71,9 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 		AdMobManager.adViewFailedToReceiveAdEvent += didFailToLoadAdMobAd;
 		//Playhaven
 		
-		//Vungle
+		//Vungle]
+		
+		StartCoroutine(LoadPList());
 		
 	}
 	
@@ -89,7 +91,7 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 		}
 	}
 	
-	public static IEnumerator LoadPList()
+	public IEnumerator LoadPList()
 	{
 		
 		

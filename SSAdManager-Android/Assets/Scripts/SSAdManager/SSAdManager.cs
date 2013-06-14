@@ -70,6 +70,8 @@ public class SSAdManager : MonoBehaviour, IRevMobListener {
 		//Admob
 		AdMobAndroidManager.failedToReceiveAdEvent += didFailToLoadAdMobAd;
 		
+		StartCoroutine(LoadPList());
+		
 	}
 	
 	// Update is called once per frame
@@ -86,7 +88,7 @@ public class SSAdManager : MonoBehaviour, IRevMobListener {
 		}
 	}
 	
-	public static IEnumerator LoadPList()
+	public IEnumerator LoadPList()
 	{
 		
 		

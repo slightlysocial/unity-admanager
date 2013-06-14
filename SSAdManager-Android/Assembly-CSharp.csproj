@@ -48,7 +48,6 @@
      <Compile Include="Assets\Scripts\SSAdManager\PListManager.cs" />
      <Compile Include="Assets\Scripts\SSAdManager\SSAdInitializer.cs" />
      <Compile Include="Assets\Scripts\SSAdManager\SSAdManager.cs" />
-     <Compile Include="Assets\Scripts\SSAdManager\TestScriptGUI.cs" />
      <Compile Include="Assets\TapjoyPlugin\TapjoyPlugin.cs" />
      <Compile Include="Assets\TapjoyPlugin\TapjoyPluginAndroid.cs" />
      <Compile Include="Assets\TapjoyPlugin\TapjoyPluginDefault.cs" />
