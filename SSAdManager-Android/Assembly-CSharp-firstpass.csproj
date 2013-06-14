@@ -52,7 +52,6 @@
      <Compile Include="Assets\Plugins\Android\RevMobAndroidLink.cs" />
      <Compile Include="Assets\Plugins\Android\RevMobAndroidNotification.cs" />
      <Compile Include="Assets\Plugins\Android\RevMobAndroidPopup.cs" />
-     <Compile Include="Assets\Plugins\Android\VungleWarpper.cs" />
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroid.cs" />
      <Compile Include="Assets\Plugins\ChartBoostAndroid\ChartBoostAndroidManager.cs" />
      <Compile Include="Assets\Plugins\FlurryAgent.cs" />
@@ -69,7 +68,7 @@
      <Compile Include="Assets\Plugins\RevMobPopup.cs" />
      <None Include="Assets\Plugins\AdMobAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
-     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifestMAINExample.xml" />
      <None Include="Assets\Plugins\Android\build.xml" />
      <None Include="Assets\Plugins\Android\TapjoySampleAndroidManifest.xml" />
  <Reference Include="Assets\Plugins\Prime31\P31RestKit">

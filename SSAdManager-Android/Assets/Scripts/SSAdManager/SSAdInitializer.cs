@@ -39,12 +39,6 @@ public class SSAdInitializer : MonoBehaviour {
 	public string TapJoyID = "";
 	public string TapJoySecretKey = "";
 	
-	//Vungle variables
-	public bool VungleActiveFlag;						//Do you want Vungle activated in this project?
-	public static bool VungleActiveStaticFlag;			//Add condition of Vungle Active Flag to this
-	public string VungleID = "";						//Vungle ID
-	public static VungleWarpper vungleSession;
-	
 	//Flurry variables
 	public bool FlurryActiveFlag;						//Do you want Flurry activated in this project?
 	public static bool FlurryActiveStaticFlag;			//Add condition of Flurry Active Flag to this
@@ -62,7 +56,6 @@ public class SSAdInitializer : MonoBehaviour {
 		PlayHavenActiveStaticFlag = PlayHavenActiveFlag;
 		IAdsActiveStaticFlag = IAdsActiveFlag;
 		TapJoyActiveStaticFlag = TapJoyActiveFlag;
-		VungleActiveStaticFlag = VungleActiveFlag;
 		FlurryActiveStaticFlag = FlurryActiveFlag;
 		
 		//Initialize ChartBoost
@@ -102,14 +95,6 @@ public class SSAdInitializer : MonoBehaviour {
 		if(TapJoyActiveFlag)
 		{
 			TapjoyPluginAndroid.RequestTapjoyConnect(TapJoyID, TapJoySecretKey);
-		}
-		
-		//Initialize Vungle
-		if(VungleActiveFlag)
-		{	
-			vungleSession = new VungleWarpper();
-			vungleSession.init(VungleID);
-			Debug.Log("Worked");
 		}
 		
 		//Initialize Flurry

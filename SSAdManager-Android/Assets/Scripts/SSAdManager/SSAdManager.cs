@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SSAdManager : MonoBehaviour {
+public class SSAdManager : MonoBehaviour, IRevMobListener {
 	
 	//PlayHaven variables
 	public static bool PlayHavenRunFullScreenAd;							//Enables/disables Full screen ad in Update method
@@ -61,6 +61,14 @@ public class SSAdManager : MonoBehaviour {
 		PListStaticURL = PListURL;
 		CurrentStaticVersionNumber = CurrentVersionNumber;
 		//Debug.Log(PListStaticURL);
+		
+		//Set FailOvers
+		//Chartboost
+		ChartBoostAndroidManager.didFailToLoadInterstitialEvent += didFailToLoadChartBoostAd;
+		//Revmob
+		//Implemented as inheritance
+		//Admob
+		AdMobAndroidManager.failedToReceiveAdEvent += didFailToLoadAdMobAd;
 		
 	}
 	
@@ -204,8 +212,7 @@ public class SSAdManager : MonoBehaviour {
 		}
 		else if(adValue == AdValue.VUNGLE)
 		{
-			showVungleAd();
-			Debug.Log("AD SHOWING");
+	
 		}
 		
 	}
@@ -301,9 +308,49 @@ public class SSAdManager : MonoBehaviour {
 			
 	}
 	
-	public static void showVungleAd()
+	/*FailOver Methods */
+	public static void didFailToLoadChartBoostAd(string location)
 	{
-		if(SSAdInitializer.VungleActiveStaticFlag)
-			SSAdInitializer.vungleSession.displayAdvert();
+		ShowAd(adOnLoadFail);
 	}
+	
+	//Revmob
+	
+	 #region IRevMobListener implementation
+	public void RevMobAdDidReceive (string revMobAdType) {
+        Debug.Log("Ad did receive.");
+    }
+
+    public void RevMobAdDidFail (string revMobAdType) {
+        Debug.Log("Ad did fail.");
+		ShowAd (adOnLoadFail);
+    }
+
+    public void RevMobAdDisplayed (string revMobAdType) {
+        Debug.Log("Ad displayed.");
+    }
+
+    public void RevMobUserClickedInTheAd (string revMobAdType) {
+        Debug.Log("Ad clicked.");
+    }
+
+    public void RevMobUserClosedTheAd (string revMobAdType) {
+        Debug.Log("Ad closed.");
+    }
+	
+	public void RevMobInstallDidReceive(string message){
+		Debug.Log("Install Received!");
+	}
+	
+	public void RevMobInstallDidFail(string message){
+		Debug.Log("Install failed.");
+	}
+    #endregion
+	
+	//Admob
+	public static void didFailToLoadAdMobAd(string error)
+	{
+		ShowAd(adBannerFail);
+	}
+
 }

@@ -50,7 +50,7 @@
      <Compile Include="Assets\Editor\PlayHaven\PlayHavenTriggerWindow.cs" />
      <None Include="Assets\Plugins\AdMobAndroid\Manifest.xml" />
      <None Include="Assets\Plugins\ChartBoostAndroid\Manifest.xml" />
-     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifestMAINExample.xml" />
      <None Include="Assets\Plugins\Android\build.xml" />
      <None Include="Assets\Plugins\Android\TapjoySampleAndroidManifest.xml" />
  <Reference Include="Assets\Editor\PlayHaven\PlayHavenEditor">
