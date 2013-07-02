@@ -7,6 +7,12 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 	public static bool PlayHavenRunFullScreenAd;							//Enables/disables Full screen ad in Update method
 	public static bool PlayHavenRunMoreGamesAd;
 	
+	//Ad Delay variables
+	public static bool showAdNowFlag;
+	public static bool adHasShownFlag;
+	public static float adTimer;
+	public float TimeUntilNextAd;
+	
 	//PList website
 	public string PListURL = "";
 	public static string PListStaticURL;
@@ -42,15 +48,15 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 		ADSON,
 		CHARTBOOST_FS,
 		CHARTBOOST_MOREGAMES,
-		REVMOB_FS,
 		REVMOB_POPUP,
-		REVMOB_BANNER,
+		REVMOB_FS,
+		MOBCLIX_BANNER,
 		PLAYHAVEN_FS,
 		PLAYHAVEN_MOREGAMES,
+		REVMOB_BANNER,
 		APPLIFT,
 		ADMOB_BANNER,
 		IADS_BANNER,
-		MOBCLIX_BANNER,
 		VUNGLE,
 	};
 	
@@ -71,7 +77,10 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 		AdMobManager.adViewFailedToReceiveAdEvent += didFailToLoadAdMobAd;
 		//Playhaven
 		
-		//Vungle]
+		//Ad flags
+		adHasShownFlag = false;
+		showAdNowFlag = true;
+		adTimer = 0.0f;
 		
 		StartCoroutine(LoadPList());
 		
@@ -79,6 +88,23 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 	
 	// Update is called once per frame
 	void Update () {
+		
+		if(adHasShownFlag){
+			showAdNowFlag = false;
+			adTimer += Time.deltaTime;
+			
+			if(adTimer >= TimeUntilNextAd)
+			{
+				adTimer = 0.0f;
+				showAdNowFlag = true;
+				adHasShownFlag = false;
+			}
+		}
+		
+		
+		
+		
+		
 		if(PlayHavenRunFullScreenAd)
 		{
 			GameObject.Find("PlayHavenFullScreen").SendMessage("RequestPlayHavenContent");
@@ -159,67 +185,74 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 			return;	
 		}
 
+		if(showAdNowFlag)
+		{
+			if(adValue == AdValue.CHARTBOOST_FS)
+			{
+				showChartBoostFullScreenAd();
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.REVMOB_FS)
+			{
+				showRevMobFullScreenAd();
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.REVMOB_POPUP)
+			{
+				showRevMobPopUpAd();
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.PLAYHAVEN_FS)
+			{
+				showPlayHavenFullScreenAd();
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.APPLIFT)
+			{
+				//TODO
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.VUNGLE)
+			{
+				showVungleAd();
+				Debug.Log("AD SHOWING");
+			}
+		}
+			
+			if(adValue == AdValue.REVMOB_BANNER)
+			{
+				showRevMobBannerAd();
+				Debug.Log("AD SHOWING");
+			}
+			
+			else if(adValue == AdValue.ADMOB_BANNER)
+			{
+				showAdMobBanner();
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.IADS_BANNER)
+			{
+				showIAdsBanner();
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.MOBCLIX_BANNER)
+			{
+				//TODO
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.CHARTBOOST_MOREGAMES)
+			{
+				showChartBoostMoreGamesAd();
+				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.PLAYHAVEN_MOREGAMES)
+			{
+				showPlayHavenMoreGamesAd();
+				Debug.Log("AD SHOWING");
+			}
+			
 		
-		if(adValue == AdValue.CHARTBOOST_FS)
-		{
-			showChartBoostFullScreenAd();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.CHARTBOOST_MOREGAMES)
-		{
-			showChartBoostMoreGamesAd();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.REVMOB_FS)
-		{
-			showRevMobFullScreenAd();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.REVMOB_POPUP)
-		{
-			showRevMobPopUpAd();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.REVMOB_BANNER)
-		{
-			showRevMobBannerAd();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.PLAYHAVEN_FS)
-		{
-			showPlayHavenFullScreenAd();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.PLAYHAVEN_MOREGAMES)
-		{
-			showPlayHavenMoreGamesAd();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.APPLIFT)
-		{
-			//TODO
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.ADMOB_BANNER)
-		{
-			showAdMobBanner();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.IADS_BANNER)
-		{
-			showIAdsBanner();
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.MOBCLIX_BANNER)
-		{
-			//TODO
-			Debug.Log("AD SHOWING");
-		}
-		else if(adValue == AdValue.VUNGLE)
-		{
-			showVungleAd();
-			Debug.Log("AD SHOWING");
-		}
+		
 		
 	}
 	
@@ -227,23 +260,27 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 	{
 		ShowAd(adOnLoad1);
 		ShowAd(adOnLoad2);
+		adHasShownFlag = true;
 	}
 	
 	public static void ShowOnPause()
 	{
 		ShowAd(adOnPause1);
 		//ShowAd (adOnPause2);
+		adHasShownFlag = true;
 	}
 	
 	public static void ShowOnReturn()
 	{
 		ShowAd (adOnReturn1);
 		//ShowAd (adOnReturn2);
+		adHasShownFlag = true;
 	}
 	
 	public static void ShowOnGameOver()
 	{
 		ShowAd (adOnGameOver1);	
+		adHasShownFlag = true;
 	}
 	
 	public static void ShowBanner()
@@ -283,7 +320,11 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 	public static void showRevMobBannerAd()
 	{
 		if(SSAdInitializer.RevMobActiveStaticFlag){
-			SSAdInitializer.revMobSession.CreateBanner(0f, Screen.height - 100f, Screen.width, 100f, null, null);
+			Debug.Log("SHOWREVMOBBBBBBB banner");
+			RevMobBanner banner = SSAdInitializer.revMobSession.CreateBanner();
+			banner.Show();
+			//SSAdInitializer.revMobSession.CreateBanner(0f, Screen.height /2, Screen.width, 100f, null, null);
+			
 		}
 	}
 	
