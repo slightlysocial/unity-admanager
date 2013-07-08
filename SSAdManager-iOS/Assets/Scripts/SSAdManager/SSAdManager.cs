@@ -58,6 +58,8 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 		ADMOB_BANNER,
 		IADS_BANNER,
 		VUNGLE,
+		APPLOVIN_FS,
+		APPLOVIN_BANNER,
 	};
 	
 	// Use this for initialization
@@ -217,6 +219,10 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 				showVungleAd();
 				Debug.Log("AD SHOWING");
 			}
+			else if(adValue == AdValue.APPLOVIN_FS)
+			{
+				showAppLovinFullScreenAd();	
+			}
 		}
 			
 			if(adValue == AdValue.REVMOB_BANNER)
@@ -239,6 +245,10 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 			{
 				//TODO
 				Debug.Log("AD SHOWING");
+			}
+			else if(adValue == AdValue.APPLOVIN_BANNER)
+			{
+				showAppLovinBanner();
 			}
 			else if(adValue == AdValue.CHARTBOOST_MOREGAMES)
 			{
@@ -368,6 +378,22 @@ public class SSAdManager : MonoBehaviour, IRevMobListener{
 			else{
 				ShowAd (adOnGameOverFail);
 			}
+		}
+	}
+	
+	public static void showAppLovinBanner()
+	{
+		if(SSAdInitializer.AppLovinStaticFlag)
+		{
+			AppLovin.ShowAd(AppLovin.AD_POSITION_CENTER, AppLovin.AD_POSITION_BOTTOM);	
+		}
+	}
+	
+	public static void showAppLovinFullScreenAd()
+	{
+		if(SSAdInitializer.AppLovinStaticFlag)
+		{
+			AppLovin.ShowInterstitial();	
 		}
 	}
 	

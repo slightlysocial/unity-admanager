@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\SSAdManager\PListManager.cs" />
      <Compile Include="Assets\Scripts\SSAdManager\SSAdInitializer.cs" />
      <Compile Include="Assets\Scripts\SSAdManager\SSAdManager.cs" />
+     <None Include="Assets\Plugins\AppLovin\AppLovin Readme.txt" />
      <None Include="Assets\Editor\Flurry\SDK\Flurry-LICENSE.txt" />
  <Reference Include="Assets\Plugins\P31RestKit">
  <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>

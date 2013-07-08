@@ -49,6 +49,11 @@ public class SSAdInitializer : MonoBehaviour {
 	public static bool FlurryActiveStaticFlag;			//Add condition of Flurry Active Flag to this
 	public string FlurryID = "";						//Flurry ID
 	
+	//AppLovin
+	public bool AppLovinFlag;
+	public static bool AppLovinStaticFlag;
+	public string AppLovinID = "";
+	
 	
 	// Use this for initialization
 	void Awake () {
@@ -62,6 +67,7 @@ public class SSAdInitializer : MonoBehaviour {
 		TapJoyActiveStaticFlag = TapJoyActiveFlag;
 		VungleActiveStaticFlag = VungleActiveFlag;
 		FlurryActiveStaticFlag = FlurryActiveFlag;
+		AppLovinStaticFlag = AppLovinFlag;
 		
 		//Initialize ChartBoost
 		if(ChartBoostActiveFlag)
@@ -113,6 +119,12 @@ public class SSAdInitializer : MonoBehaviour {
 		{
 			FlurryBinding.startSession(FlurryID);
 			//FlurryBinding.logEvent("Testing session started", false);
+		}
+		
+		if(AppLovinFlag)
+		{
+			AppLovin.SetSdkKey(AppLovinID);
+			AppLovin.InitializeSdk();
 		}
 	}
 	
