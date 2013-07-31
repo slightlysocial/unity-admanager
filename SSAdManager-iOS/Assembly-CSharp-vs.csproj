@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\SSAdManager\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\SSAdManager\PListManager.cs" />
+     <Compile Include="Assets\Scripts\SSAdManager\SSAdEventListener.cs" />
      <Compile Include="Assets\Scripts\SSAdManager\SSAdInitializer.cs" />
      <Compile Include="Assets\Scripts\SSAdManager\SSAdManager.cs" />
      <None Include="Assets\Plugins\AppLovin\AppLovin Readme.txt" />
