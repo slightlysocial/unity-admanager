@@ -36,9 +36,12 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 	
 	public void didLoadChartboostInterstitial( string message )
 	{
+		
 		SSAdManager.adHasShownFlag = true;
 		SSAdManager.activateInterstitial = false;
 		SSAdManager.failCounter = 0;
+		
+		ResetShowingAdFlags();
 	}
 	
 	public void didLoadChartboostMoreGames ()
@@ -66,8 +69,11 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 	public void RevMobAdDidReceive (string revMobAdType) {
         Debug.Log("Ad did receive.");
 		SSAdManager.adHasShownFlag = true;
+		
 		SSAdManager.activateInterstitial = false;
 		SSAdManager.failCounter = 0;		
+		
+		ResetShowingAdFlags();
     }
 	
 	public void RevMobAdDidFail(string revMobAdType)
@@ -107,6 +113,8 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 			SSAdManager.adHasShownFlag = true;
 			SSAdManager.activateInterstitial = false;
 			SSAdManager.failCounter = 0;
+			
+			ResetShowingAdFlags();
 		}
 		else if(SSAdManager.activateMoreGames)
 		{
@@ -145,6 +153,8 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 	{
 		SSAdManager.activateBanner = false;
 		SSAdManager.failCounter = 0;
+		
+		ResetShowingAdFlags();
 	}
 	
 	public void didFailToLoadiAdBanner( string error)
@@ -178,6 +188,8 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 	{
 		SSAdManager.activateBanner = false;
 		SSAdManager.failCounter = 0;
+		
+		ResetShowingAdFlags();
 	}
 	
 	public void didFailToLoadAdMobBanner( string error)
@@ -185,5 +197,15 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 		Debug.Log("Failed to load admob banner");
 		SSAdManager.failedBanner = true;
 		SSAdManager.failCounter++;
+	}
+	
+// ------------- turn off showing ads flags ------------
+	
+	public void ResetShowingAdFlags()
+	{
+		SSAdManager.showingReturn = false;
+		SSAdManager.showingGameOver = false;	
+		SSAdManager.showingPause = false;	
+		SSAdManager.showingOnLoad = false;	
 	}
 }

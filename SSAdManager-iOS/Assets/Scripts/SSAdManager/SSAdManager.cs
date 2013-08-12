@@ -317,6 +317,7 @@ public class SSAdManager : MonoBehaviour{
 			activateInterstitial = true;        
 			ShowAd(AD_BOOT_UP_1);
 			activateInterstitial = true;
+			adHasShownFlag = false;
 			ShowAd(AD_BOOT_UP_2);
 			//adHasShownFlag = true;
 		}
@@ -439,6 +440,11 @@ public class SSAdManager : MonoBehaviour{
 				adHasShownFlag = true;
 				activateInterstitial = false;
 				failCounter = 0;
+				
+				showingGameOver = false;
+				showingOnLoad = false;
+				showingPause = false;
+				showingReturn = false;
 			}
 			else{
 				failedInterstitial = true;
