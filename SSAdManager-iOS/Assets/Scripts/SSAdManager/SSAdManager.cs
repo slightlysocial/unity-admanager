@@ -257,51 +257,67 @@ public class SSAdManager : MonoBehaviour{
 			if(!activateBanner && !activateMoreGames && activateInterstitial){
 				if(adValue == AdValue.CHARTBOOST)
 				{
+					Debug.Log("Should show chartboost fs");
 					showChartBoostFullScreenAd();
 				}
 				else if(adValue == AdValue.REVMOB)
 				{
+					Debug.Log("Should show revmob fs");
 					showRevMobFullScreenAd();
 				}
 				else if(adValue == AdValue.PLAYHAVEN)
 				{
+					Debug.Log("Should show play haven fs");
 					showPlayHavenFullScreenAd();
 				}
 				else if(adValue == AdValue.APPLOVIN)
 				{
+					Debug.Log("Should show app lovin fs");
 					showAppLovinFullScreenAd();
 				}
 				else if(adValue == AdValue.VUNGLE)
 				{
+					Debug.Log("Should show vungle fs");
 					showVungleAd();
 				}
 			}
 		}
 		
+		Debug.Log("activate interstitial?" + activateInterstitial);
+		Debug.Log("activate banner?" + activateBanner);
+		Debug.Log("activate more games?" + activateMoreGames);
+		Debug.Log("ad value is: " + adValue);
+		
 		//Show Banner and More Games ads
 		if(!activateInterstitial && (activateBanner || activateMoreGames)){
 			if(adValue == AdValue.CHARTBOOST)
 			{
+				Debug.Log("Should show chartboost more games");
 				showChartBoostMoreGamesAd();
 			}
 			else if(adValue == AdValue.PLAYHAVEN)
 			{
+				Debug.Log("Should show plyhaven more games");
 				showPlayHavenMoreGamesAd();
 			}
 			else if(adValue == AdValue.IADS)
 			{
+				Debug.Log("Should show iad banner");
 				showIAdsBanner();
 			}
 			else if(adValue == AdValue.ADMOB)
 			{
+				Debug.Log("Should show admob banner");
 				showAdMobBanner();
 			}
 			else if(adValue == AdValue.APPLOVIN)
 			{
+				Debug.Log("Should show app lovin banner");
 				showAppLovinBanner();
 			}
 			else if(adValue == AdValue.REVMOB)
 			{
+				Debug.Log("Should show revmob banner");
 				showRevMobBannerAd();
 			}
 		}
@@ -314,9 +330,13 @@ public class SSAdManager : MonoBehaviour{
 	{
 		if(AD_BOOT_UP_ON != AdValue.ADSOFF){
 			showingOnLoad = true;
-			activateInterstitial = true;        
+			activateInterstitial = true;
+			activateBanner = false;
+			activateMoreGames = false;
 			ShowAd(AD_BOOT_UP_1);
 			activateInterstitial = true;
+			activateBanner = false;
+			activateMoreGames = false;
 			adHasShownFlag = false;
 			ShowAd(AD_BOOT_UP_2);
 			//adHasShownFlag = true;
@@ -328,6 +348,8 @@ public class SSAdManager : MonoBehaviour{
 		if(AD_PAUSE_ON != AdValue.ADSOFF){
 			showingPause = true;
 			activateInterstitial = true;
+			activateBanner = false;
+			activateMoreGames = false;
 			ShowAd(AD_PAUSE_1);
 			//ShowAd (adOnPause2);
 			//adHasShownFlag = true;
@@ -339,6 +361,8 @@ public class SSAdManager : MonoBehaviour{
 		if(AD_RETURN_ON != AdValue.ADSOFF){
 			showingReturn = true;
 			activateInterstitial = true;
+			activateBanner = false;
+			activateMoreGames = false;
 			ShowAd (AD_RETURN_1);
 			//ShowAd (adOnReturn2);
 			//adHasShownFlag = true;
@@ -350,6 +374,8 @@ public class SSAdManager : MonoBehaviour{
 		if(AD_GAMEOVER_ON != AdValue.ADSOFF){
 			showingGameOver = true;
 			activateInterstitial = true;
+			activateBanner = false;
+			activateMoreGames = false;
 			ShowAd (AD_GAMEOVER_1);	
 			//adHasShownFlag = true;
 		}
@@ -359,6 +385,8 @@ public class SSAdManager : MonoBehaviour{
 	{
 		if(AD_BANNER_ON != AdValue.ADSOFF){
 			activateBanner = true;
+			activateInterstitial = false;
+			activateMoreGames = false;
 			ShowAd (AD_BANNER_1);
 		}
 	}
@@ -367,6 +395,8 @@ public class SSAdManager : MonoBehaviour{
 	{
 		if(AD_MOREGAMES_ON != AdValue.ADSOFF){
 			activateMoreGames = true;
+			activateInterstitial = false;
+			activateBanner = false;
 			ShowAd (AD_MOREGAMES_1);
 		}
 	}
@@ -458,6 +488,7 @@ public class SSAdManager : MonoBehaviour{
 		if(SSAdInitializer.AppLovinStaticFlag)
 		{
 			AppLovin.ShowAd(AppLovin.AD_POSITION_CENTER, AppLovin.AD_POSITION_BOTTOM);	
+			
 		}
 	}
 	
@@ -465,7 +496,17 @@ public class SSAdManager : MonoBehaviour{
 	{
 		if(SSAdInitializer.AppLovinStaticFlag)
 		{
-			AppLovin.ShowInterstitial();	
+			AppLovin.ShowInterstitial();
+			
+			//Tempory until callback functions available
+			adHasShownFlag = true;
+			activateInterstitial = false;
+			failCounter = 0;
+			
+			showingGameOver = false;
+			showingOnLoad = false;
+			showingPause = false;
+			showingReturn = false;
 		}
 	}
 	

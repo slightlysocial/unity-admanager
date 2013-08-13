@@ -17,8 +17,9 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 		PlayHaven.PlayHavenManager.instance.OnDidDisplayContent += didLoadPlayHavenContent;
 		
 		//iAds enable callbacks
-		AdManager.interstitalAdFailed += didLoadiAdsBanner;
+		AdManager.interstitialAdLoaded += didLoadiAdsBanner;
 		AdManager.interstitalAdFailed += didFailToLoadiAdBanner;
+
 		
 		//Applovin enable callbacks
 		// missing manager or event listener class
@@ -149,8 +150,9 @@ public class SSAdEventListener : MonoBehaviour, IRevMobListener {
 	
 //---------------- iAds ------------------------
 	
-	public void didLoadiAdsBanner (string error)
+	public void didLoadiAdsBanner ()
 	{
+		Debug.Log("loaded iads banner!");
 		SSAdManager.activateBanner = false;
 		SSAdManager.failCounter = 0;
 		
